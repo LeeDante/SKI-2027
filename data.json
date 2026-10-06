@@ -1,0 +1,56 @@
+{
+  "trip": {
+    "title": "SKI-2027 日本東北冬旅",
+    "dates": "2027-01-21 — 2027-02-06",
+    "regions": [
+      {"name":"仙台","dates":"01-21 — 01-26","status":"日期已確認","note":"5晚；抵達後採買與仙台周邊行程。"},
+      {"name":"藏王","dates":"01-26 — 01-31","status":"住宿已訂","note":"藏王四季 5 晚；兩筆訂單，中途換房。"},
+      {"name":"山形／天童","dates":"01-31 — 02-03","status":"住宿已訂","note":"ほほえみの宿 滝の湯 3晚；季之花 和風現代豪華客房・花園景觀；2大1小；米澤牛壽喜燒會席＋早晚餐。"},
+      {"name":"東京","dates":"02-03 — 02-06","status":"日期已確認","note":"3晚；上野優先，飯店待選。"}
+    ]
+  },
+  "skiReferences": [
+    {
+      "country":"台灣",
+      "provider":"CitySki 台中",
+      "sport":"Snowboard",
+      "plan":"初階 4 堂",
+      "price":"NT$3,600",
+      "unit":"NT$900／堂",
+      "duration":"每堂約 1 小時",
+      "note":"短期先建立基本動作，適合之後接日本雪場教練。",
+      "url":"https://www.cityski.com.tw/page-4/",
+      "checked":"2026-10-06"
+    },
+    {
+      "country":"台灣",
+      "provider":"iSKI",
+      "sport":"Snowboard",
+      "plan":"初階 8 堂",
+      "price":"NT$15,900",
+      "unit":"約 NT$1,988／堂",
+      "duration":"每堂約 50 分鐘",
+      "note":"完整初階課程，內容含基本煞車、方向控制與落葉飄等。",
+      "url":"https://www.iski.com.tw/information/13",
+      "checked":"2026-10-06"
+    },
+    {
+      "country":"台灣",
+      "provider":"SNOWIN",
+      "sport":"Snowboard / Ski",
+      "plan":"初階私人 1對1／8堂",
+      "price":"NT$19,350／人",
+      "unit":"約 NT$2,419／堂",
+      "duration":"依官方課程規格",
+      "note":"另有初階團體 8 堂 NT$15,800／人；之後可與日本教練方案一起比較。",
+      "url":"https://snowin.com.tw/pages/indoor-lesson",
+      "checked":"2026-10-06"
+    }
+  ],
+  "todos": [
+    {"category":"旅遊","text":"預約 1/31 Ginzan Onsen Twilight Trip（日文自由散策版）","status":"待處理"},
+    {"category":"住宿","text":"等待瀧之湯回覆浴缸與 1/31 晚餐最晚開始時間","status":"待外部回覆"},
+    {"category":"交通","text":"確認 1/31 山形→天童正式 JR 時刻及瀧之湯接站時間","status":"待處理"},
+    {"category":"滑雪","text":"加入日本藏王教練價格頁，與台灣室內課程比較","status":"待處理"}
+  ]
+}
