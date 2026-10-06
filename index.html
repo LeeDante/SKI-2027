@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SKI-2027 日本東北冬旅計畫">
+  <title>SKI-2027 日本東北冬旅</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#overview">總覽</a>
+      <a href="#regionsSec">四地區</a>
+      <a href="#refs">滑雪參考資料</a>
+      <a href="#todosSec">待辦事項</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="overview" class="hero">
+    <div class="eyebrow">SKI 2027 / TRAVEL WORKSPACE</div>
+    <h1 id="tripTitle">SKI-2027</h1>
+    <p id="tripDates" class="muted"></p>
+    <p>日本東北冬季親子旅遊＋藏王滑雪規劃。GitHub 版將資料與版面分離，方便後續持續更新。</p>
+  </section>
+
+  <section id="regionsSec">
+    <div class="eyebrow">TRIP OVERVIEW</div>
+    <h2>四地區・同一份計畫</h2>
+    <div class="grid" id="regions"></div>
+  </section>
+
+  <section id="refs">
+    <div class="eyebrow">REFERENCE</div>
+    <h2>滑雪參考資料</h2>
+    <p class="muted">目前先收錄台灣室內課程。之後日本藏王中文／私人教練價格會直接加入同一區比較。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>地區</th><th>業者</th><th>項目</th><th>方案</th><th>總價</th><th>平均</th><th>時間</th><th>備註</th><th>來源</th><th>查價日</th></tr>
+        </thead>
+        <tbody id="skiRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="todosSec">
+    <div class="eyebrow">NEXT ACTIONS</div>
+    <h2>待辦事項</h2>
+    <div id="todos"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
