@@ -3,57 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
   <meta name="description" content="SKI-2027 日本東北冬旅計畫">
   <title>SKI-2027 日本東北冬旅</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <div class="wrap">
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="#top"><span class="brand-mark">SKI</span><span>2027 日本東北冬旅</span></a>
     <nav>
-      <a href="#overview">總覽</a>
-      <a href="#regionsSec">四地區</a>
-      <a href="#refs">滑雪參考資料</a>
-      <a href="#todosSec">待辦事項</a>
+      <a href="#dashboard">總覽</a>
+      <a href="#regions">四地區</a>
+      <a href="#itinerary">行程</a>
+      <a href="#todos">待辦</a>
+      <a href="#references">滑雪參考</a>
     </nav>
+    <button id="themeBtn" class="theme-btn" type="button">☀︎ 亮色</button>
   </div>
 </header>
 
-<main class="wrap">
-  <section id="overview" class="hero">
-    <div class="eyebrow">SKI 2027 / TRAVEL WORKSPACE</div>
-    <h1 id="tripTitle">SKI-2027</h1>
-    <p id="tripDates" class="muted"></p>
-    <p>日本東北冬季親子旅遊＋藏王滑雪規劃。GitHub 版將資料與版面分離，方便後續持續更新。</p>
+<main id="top">
+  <section class="hero shell">
+    <div>
+      <div class="eyebrow">WINTER IN JAPAN · TRAVEL WORKSPACE</div>
+      <h1 id="tripTitle">SKI-2027 日本東北冬旅</h1>
+      <p class="hero-copy">一步一步，準備出發。行程、住宿、交通、預算、滑雪課程與待辦集中在同一頁。</p>
+      <div class="hero-meta">
+        <span id="tripDates"></span><span>2 大 1 小</span><span id="lastUpdated"></span>
+      </div>
+    </div>
+    <div class="hero-chip">2027<br><strong>JAN–FEB</strong></div>
   </section>
 
-  <section id="regionsSec">
-    <div class="eyebrow">TRIP OVERVIEW</div>
-    <h2>四地區・同一份計畫</h2>
-    <div class="grid" id="regions"></div>
-  </section>
+  <section id="dashboard" class="section shell">
+    <div class="section-head">
+      <div><div class="eyebrow">THE TRIP, AT A GLANCE</div><h2>旅行準備，一眼掌握</h2></div>
+      <div class="section-note">目前 GitHub Pages 為正式維護版本</div>
+    </div>
+    <div class="dashboard-grid">
+      <article class="panel progress-panel">
+        <div class="panel-title">準備進度</div>
+        <div class="progress-main"><strong id="progressDone">0</strong><span>/</span><span id="progressTotal">0</span></div>
+        <div id="progressBar" class="bar"><i></i></div>
+        <div id="categoryProgress" class="mini-grid"></div>
+      </article>
 
-  <section id="refs">
-    <div class="eyebrow">REFERENCE</div>
-    <h2>滑雪參考資料</h2>
-    <p class="muted">目前先收錄台灣室內課程。之後日本藏王中文／私人教練價格會直接加入同一區比較。</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>地區</th><th>業者</th><th>項目</th><th>方案</th><th>總價</th><th>平均</th><th>時間</th><th>備註</th><th>來源</th><th>查價日</th></tr>
-        </thead>
-        <tbody id="skiRows"></tbody>
-      </table>
+      <article class="panel budget-panel">
+        <div class="panel-title-row"><div class="panel-title">旅行預算</div><span id="budgetPercent" class="pill"></span></div>
+        <div class="money-main"><span>已知已付</span><strong id="knownPaid"></strong></div>
+        <div id="budgetBar" class="bar money"><i></i></div>
+        <div class="budget-stats">
+          <div><span>預算上限</span><strong id="budgetLimit"></strong></div>
+          <div><span>已列費用小計</span><strong id="listedSubtotal"></strong></div>
+          <div><span>已知尚未支付／預留</span><strong id="knownUnpaid"></strong></div>
+          <div><span>付款狀態待確認</span><strong id="paymentUnknown"></strong></div>
+        </div>
+        <p id="budgetNote" class="tiny muted"></p>
+      </article>
     </div>
   </section>
 
-  <section id="todosSec">
-    <div class="eyebrow">NEXT ACTIONS</div>
-    <h2>待辦事項</h2>
-    <div id="todos"></div>
+  <section id="regions" class="section shell">
+    <div class="section-head">
+      <div><div class="eyebrow">4 AREAS · 1 PLAN</div><h2>四地區・同一份計畫</h2></div>
+      <div class="section-note">01 仙台 → 02 藏王 → 03 山形／天童 → 04 東京</div>
+    </div>
+    <div id="regionGrid" class="region-grid"></div>
+  </section>
+
+  <section id="itinerary" class="section shell">
+    <div class="section-head">
+      <div><div class="eyebrow">ITINERARY</div><h2>行程總覽</h2></div>
+      <div class="section-note">左邊大綱／右邊細節</div>
+    </div>
+    <div class="itinerary-layout">
+      <div id="itineraryList" class="itinerary-list"></div>
+      <article id="itineraryDetail" class="panel itinerary-detail"></article>
+    </div>
+  </section>
+
+  <section id="todos" class="section shell">
+    <div class="section-head">
+      <div><div class="eyebrow">NEXT ACTIONS</div><h2>待辦事項</h2></div>
+      <div class="section-note">先看高優先項目</div>
+    </div>
+    <div class="todo-toolbar">
+      <button class="filter active" data-filter="全部">全部</button>
+      <button class="filter" data-filter="高">高優先</button>
+      <button class="filter" data-filter="待外部回覆">待外部回覆</button>
+    </div>
+    <div id="todoGrid" class="todo-grid"></div>
+  </section>
+
+  <section id="references" class="section shell">
+    <div class="section-head">
+      <div><div class="eyebrow">SKI REFERENCE</div><h2>滑雪參考資料</h2></div>
+      <div class="section-note">台灣室內課程 → 後續加入日本教練價格</div>
+    </div>
+    <div id="referenceCards" class="reference-grid"></div>
+    <p class="tiny muted">價格以查價當日官方頁面為準；活動促銷可能調整。</p>
+  </section>
+
+  <section class="section shell">
+    <div class="two-col">
+      <article class="panel">
+        <div class="eyebrow">CHANGE LOG</div><h2 class="small-h2">最近變更</h2>
+        <div id="recentChanges" class="stack"></div>
+      </article>
+      <article class="panel">
+        <div class="eyebrow">SOURCES</div><h2 class="small-h2">資料來源</h2>
+        <div id="sourceList" class="stack"></div>
+      </article>
+    </div>
   </section>
 </main>
 
+<footer><div class="shell">SKI-2027 · GitHub Pages · <span id="footerUpdated"></span></div></footer>
 <script src="app.js"></script>
 </body>
 </html>
