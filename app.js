@@ -1,27 +1,136 @@
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const money = n => 'NT$ ' + Number(n).toLocaleString('zh-TW');
+
+let DATA = null;
+
 async function load(){
-  const d=await fetch('data.json').then(r=>r.json());
-  document.querySelector('#tripTitle').textContent=d.trip.title;
-  document.querySelector('#tripDates').textContent=d.trip.dates;
-
-  document.querySelector('#regions').innerHTML=d.trip.regions.map((r,i)=>`
-    <article class="card">
-      <div class="eyebrow">0${i+1}</div>
-      <h3>${r.name}</h3>
-      <div class="muted">${r.dates}</div>
-      <p><span class="badge">${r.status}</span></p>
-      <p>${r.note}</p>
-    </article>`).join('');
-
-  document.querySelector('#skiRows').innerHTML=d.skiReferences.map(x=>`
-    <tr>
-      <td>${x.country}</td><td>${x.provider}</td><td>${x.sport}</td>
-      <td>${x.plan}</td><td>${x.price}</td><td>${x.unit}</td>
-      <td>${x.duration}</td><td>${x.note}</td>
-      <td><a href="${x.url}" target="_blank" rel="noopener">官方頁</a></td>
-      <td>${x.checked}</td>
-    </tr>`).join('');
-
-  document.querySelector('#todos').innerHTML=d.todos.map(x=>`
-    <div class="todo"><span class="badge">${x.category}</span><div><strong>${x.text}</strong><div class="muted">${x.status}</div></div></div>`).join('');
+  DATA = await fetch('data.json?v=' + Date.now()).then(r=>r.json());
+  renderMeta();
+  renderDashboard();
+  renderRegions();
+  renderItinerary();
+  renderTodos();
+  renderReferences();
+  renderFooterBlocks();
+  initTheme();
 }
+
+function renderMeta(){
+  $('#tripTitle').textContent = DATA.meta.title;
+  $('#tripDates').textContent = DATA.meta.dates;
+  $('#lastUpdated').textContent = '更新 ' + DATA.meta.lastUpdated;
+  $('#footerUpdated').textContent = '最後更新 ' + DATA.meta.lastUpdated;
+}
+
+function renderDashboard(){
+  const d=DATA.dashboard, b=DATA.budget;
+  $('#progressDone').textContent=d.progress.done;
+  $('#progressTotal').textContent=d.progress.total;
+  const pct=Math.round(d.progress.done/d.progress.total*100);
+  $('#progressBar i').style.width=pct+'%';
+  $('#categoryProgress').innerHTML=d.categories.map(x=>{
+    const p=Math.round(x.done/x.total*100);
+    return '<div class="mini-progress"><div><span>'+x.name+'</span><span>'+p+'%</span></div><b>'+x.done+' / '+x.total+'</b></div>';
+  }).join('');
+
+  const bp=Math.round(b.knownPaidTwd/b.limitTwd*100);
+  $('#budgetPercent').textContent=bp+'% of budget';
+  $('#knownPaid').textContent=money(b.knownPaidTwd);
+  $('#budgetLimit').textContent=money(b.limitTwd);
+  $('#listedSubtotal').textContent=money(b.listedSubtotalTwd);
+  $('#knownUnpaid').textContent=money(b.knownUnpaidReserveTwd);
+  $('#paymentUnknown').textContent=money(b.paymentUnknownTwd);
+  $('#budgetBar i').style.width=Math.min(bp,100)+'%';
+  $('#budgetNote').textContent=b.note+'｜'+DATA.meta.exchangeRate+'｜待補金額 '+b.missingAmountItems+' 項；付款待核對 '+b.paymentCheckItems+' 項。';
+}
+
+function renderRegions(){
+  $('#regionGrid').innerHTML=DATA.regions.map(r=>`
+    <article class="region-card">
+      <div class="region-no">${r.no}</div>
+      <h3>${r.name}</h3>
+      <div class="date-line">${r.dates} · ${r.nights}</div>
+      <span class="status">${r.status}</span>
+      <p>${r.note}</p>
+      <div class="chip-row">${r.items.map(x=>'<span class="chip">'+x+'</span>').join('')}</div>
+    </article>`).join('');
+}
+
+function renderItinerary(){
+  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>`
+    <button class="itinerary-item ${i===0?'active':''}" data-i="${i}">
+      <div><span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span></div>
+      <div class="itinerary-title"><strong>${x.title}</strong><span>${x.region} · ${x.summary}</span></div>
+    </button>`).join('');
+  $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{
+    $$('.itinerary-item').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    renderItineraryDetail(Number(b.dataset.i));
+  }));
+  renderItineraryDetail(0);
+}
+
+function renderItineraryDetail(i){
+  const x=DATA.itinerary[i];
+  $('#itineraryDetail').innerHTML=`
+    <div class="detail-top">
+      <div><div class="detail-region">${x.region}</div><div class="detail-date">${x.date}</div></div>
+      <span class="status detail-status">${x.status}</span>
+    </div>
+    <h3 class="detail-title">${x.title}</h3>
+    <p class="detail-summary">${x.summary}</p>
+    <ul class="detail-list">${x.details.map(v=>'<li>'+v+'</li>').join('')}</ul>`;
+}
+
+function renderTodos(filter='全部'){
+  let arr=DATA.todos;
+  if(filter==='高') arr=arr.filter(x=>x.priority==='高');
+  if(filter==='待外部回覆') arr=arr.filter(x=>x.status==='待外部回覆');
+  $('#todoGrid').innerHTML=arr.map(x=>`
+    <article class="todo-card">
+      <div class="todo-meta"><span class="tag">${x.category}</span><span class="tag ${x.priority==='高'?'priority-high':''}">${x.priority}優先</span></div>
+      <h3>${x.text}</h3><p>${x.status}</p>
+    </article>`).join('');
+}
+$$('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+  $$('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderTodos(btn.dataset.filter);
+}));
+
+function renderReferences(){
+  $('#referenceCards').innerHTML=DATA.skiReferences.map(x=>`
+    <article class="reference-card">
+      <div class="eyebrow">${x.country} · ${x.sport}</div>
+      <h3>${x.provider}</h3>
+      <div class="reference-plan">${x.plan}</div>
+      <div class="reference-price">${x.price}</div>
+      <div class="reference-unit">${x.unit}</div>
+      <dl>
+        <dt>課程時間</dt><dd>${x.duration}</dd>
+        <dt>適合情境</dt><dd>${x.fit}</dd>
+        <dt>備註</dt><dd>${x.note}</dd>
+        <dt>查價日</dt><dd>${x.checked}</dd>
+      </dl>
+      <a class="source-link" href="${x.url}" target="_blank" rel="noopener">查看官方價格頁 ↗</a>
+    </article>`).join('');
+}
+
+function renderFooterBlocks(){
+  $('#recentChanges').innerHTML=DATA.recentChanges.map(x=>'<div class="stack-item"><time>'+x.date+'</time><p>'+x.text+'</p></div>').join('');
+  $('#sourceList').innerHTML=DATA.sources.map(x=>'<div class="stack-item"><p><a href="'+x.url+'" target="_blank" rel="noopener">'+x.label+' ↗</a></p></div>').join('');
+}
+
+function initTheme(){
+  const saved=localStorage.getItem('ski2027-theme')||'dark';
+  document.documentElement.dataset.theme=saved;
+  updateThemeButton(saved);
+  $('#themeBtn').addEventListener('click',()=>{
+    const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    document.documentElement.dataset.theme=next;
+    localStorage.setItem('ski2027-theme',next);
+    updateThemeButton(next);
+  });
+}
+function updateThemeButton(t){ $('#themeBtn').textContent=t==='dark'?'☀︎ 亮色':'◐ 深色'; }
+
 load();
