@@ -1,56 +1,113 @@
 {
-  "trip": {
+  "meta": {
     "title": "SKI-2027 日本東北冬旅",
+    "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
-    "regions": [
-      {"name":"仙台","dates":"01-21 — 01-26","status":"日期已確認","note":"5晚；抵達後採買與仙台周邊行程。"},
-      {"name":"藏王","dates":"01-26 — 01-31","status":"住宿已訂","note":"藏王四季 5 晚；兩筆訂單，中途換房。"},
-      {"name":"山形／天童","dates":"01-31 — 02-03","status":"住宿已訂","note":"ほほえみの宿 滝の湯 3晚；季之花 和風現代豪華客房・花園景觀；2大1小；米澤牛壽喜燒會席＋早晚餐。"},
-      {"name":"東京","dates":"02-03 — 02-06","status":"日期已確認","note":"3晚；上野優先，飯店待選。"}
+    "travelers": "2 大 1 小",
+    "lastUpdated": "2026-10-06",
+    "exchangeRate": "1 JPY = 0.22 TWD 試算"
+  },
+  "dashboard": {
+    "progress": {"done": 8, "total": 24},
+    "categories": [
+      {"name":"住宿","done":3,"total":9},
+      {"name":"旅遊","done":1,"total":6},
+      {"name":"交通","done":1,"total":6},
+      {"name":"行程","done":3,"total":3}
     ]
   },
-  "skiReferences": [
+  "budget": {
+    "limitTwd": 400000,
+    "knownPaidTwd": 148975,
+    "listedSubtotalTwd": 414077,
+    "knownUnpaidReserveTwd": 217150,
+    "paymentUnknownTwd": 47952,
+    "missingAmountItems": 8,
+    "paymentCheckItems": 4,
+    "note": "目前為部分費用小計，尚未包含所有待補金額；付款狀態未知的費用另列，不直接視為已付或未付。"
+  },
+  "regions": [
     {
-      "country":"台灣",
-      "provider":"CitySki 台中",
-      "sport":"Snowboard",
-      "plan":"初階 4 堂",
-      "price":"NT$3,600",
-      "unit":"NT$900／堂",
-      "duration":"每堂約 1 小時",
-      "note":"短期先建立基本動作，適合之後接日本雪場教練。",
-      "url":"https://www.cityski.com.tw/page-4/",
-      "checked":"2026-10-06"
+      "no":"01","name":"仙台","dates":"01-21 — 01-26","nights":"5晚","status":"日期已確認",
+      "note":"抵達仙台後採買與市區／近郊行程；飯店尚未確認。",
+      "items":["雪具／衣物採買","仙台城跡","海之杜水族館","松島","狐狸村"]
     },
     {
-      "country":"台灣",
-      "provider":"iSKI",
-      "sport":"Snowboard",
-      "plan":"初階 8 堂",
-      "price":"NT$15,900",
-      "unit":"約 NT$1,988／堂",
-      "duration":"每堂約 50 分鐘",
-      "note":"完整初階課程，內容含基本煞車、方向控制與落葉飄等。",
-      "url":"https://www.iski.com.tw/information/13",
-      "checked":"2026-10-06"
+      "no":"02","name":"藏王","dates":"01-26 — 01-31","nights":"5晚","status":"住宿已訂",
+      "note":"藏王四季 5 晚；兩筆訂單，中途換房。1/31 09:30 飯店接駁前往山形站西口。",
+      "items":["中文教練規劃","樹冰／纜車","全套雪具租借","1/29 中途換房"]
     },
     {
-      "country":"台灣",
-      "provider":"SNOWIN",
-      "sport":"Snowboard / Ski",
-      "plan":"初階私人 1對1／8堂",
-      "price":"NT$19,350／人",
-      "unit":"約 NT$2,419／堂",
-      "duration":"依官方課程規格",
-      "note":"另有初階團體 8 堂 NT$15,800／人；之後可與日本教練方案一起比較。",
-      "url":"https://snowin.com.tw/pages/indoor-lesson",
-      "checked":"2026-10-06"
+      "no":"03","name":"山形／天童","dates":"01-31 — 02-03","nights":"3晚","status":"住宿已訂",
+      "note":"ほほえみの宿 滝の湯；季之花 和風現代豪華客房・花園景觀；2大1小；米澤牛壽喜燒會席＋早晚餐。",
+      "items":["銀山 Twilight Trip 待預約","山寺","天童周邊","浴缸安排與 1/31 晚餐時間待回覆"]
+    },
+    {
+      "no":"04","name":"東京","dates":"02-03 — 02-06","nights":"3晚","status":"日期已確認",
+      "note":"返台前東京停留；住宿區域以上野為優先方向，飯店待選。",
+      "items":["東京自由行","最後採買","整理行李","2/06 成田→台中"]
     }
   ],
+  "itinerary": [
+    {"date":"01/21","day":"Thu","region":"仙台","title":"抵達仙台","summary":"11:50 桃園出發 → 16:00 仙台抵達","details":["入境、前往飯店","晚餐與休息","不安排高強度行程"],"status":"已定"},
+    {"date":"01/22","day":"Fri","region":"仙台","title":"仙台採買日","summary":"滑雪用品／旅行雜項採買","details":["市區採買","確認雪具租借仍以藏王全租為主","保留晚間彈性"],"status":"待細排"},
+    {"date":"01/23","day":"Sat","region":"仙台","title":"仙台近郊","summary":"松島／仙台市區候選","details":["依天候決定","避免過度塞行程"],"status":"待細排"},
+    {"date":"01/24","day":"Sun","region":"仙台","title":"親子行程","summary":"海之杜水族館／仙台港候選","details":["親子友善","行程可與採買互換"],"status":"待細排"},
+    {"date":"01/25","day":"Mon","region":"仙台","title":"彈性日","summary":"狐狸村或天候備案","details":["依雪況與交通調整","隔日進藏王，晚上整理行李"],"status":"待細排"},
+    {"date":"01/26","day":"Tue","region":"藏王","title":"仙台 → 藏王","summary":"移動、入住四季、租具確認","details":["進藏王後以飯店／巴士為主","確認雪具、locker、隔日滑雪安排"],"status":"已定方向"},
+    {"date":"01/27","day":"Wed","region":"藏王","title":"滑雪 Day 1","summary":"初學＋教練／樹冰彈性","details":["偏好下午教練","早上若天氣好優先看樹冰","目標：可安全滑一小段綠線"],"status":"待訂教練"},
+    {"date":"01/28","day":"Thu","region":"藏王","title":"滑雪 Day 2","summary":"教練＋基礎動作累積","details":["中文教練優先","視前一日進度決定課程強度"],"status":"待訂教練"},
+    {"date":"01/29","day":"Fri","region":"藏王","title":"滑雪 Day 3／換房","summary":"四季中途換房","details":["上午行程不排太緊","退房寄放行李後下午再入住","滑雪安排保留彈性"],"status":"住宿已定"},
+    {"date":"01/30","day":"Sat","region":"藏王","title":"滑雪 Day 4","summary":"自由滑／樹冰備案","details":["依能力與天候安排","若條件合適嘗試較完整綠線"],"status":"待細排"},
+    {"date":"01/31","day":"Sun","region":"天童","title":"藏王 → 天童／銀山","summary":"09:30 四季接駁 → 10:10 山形站西口","details":["JR 山形→天童","瀧之湯接站時間待確認","Ginzan Onsen Twilight Trip 方向已定・待預約","晚餐時間需與夜遊行程協調"],"status":"關鍵日"},
+    {"date":"02/01","day":"Mon","region":"天童","title":"山寺候選","summary":"山寺自行前往","details":["依積雪與體力決定","可搭配天童市區"],"status":"待細排"},
+    {"date":"02/02","day":"Tue","region":"天童","title":"天童周邊","summary":"套裝／體驗型行程候選","details":["偏好語言負擔低、門票型或自由度高的方案","可評估冬季特色活動"],"status":"待細排"},
+    {"date":"02/03","day":"Wed","region":"東京","title":"天童／山形 → 東京","summary":"新幹線移動","details":["入住東京飯店","晚間自由行"],"status":"待訂住宿"},
+    {"date":"02/04","day":"Thu","region":"東京","title":"東京自由行","summary":"採買／市區行程","details":["保留購物與休息","不塞滿整天"],"status":"待細排"},
+    {"date":"02/05","day":"Fri","region":"東京","title":"返台前整理","summary":"最後採買＋整理行李","details":["確認隔日前往成田交通","提早整理雪具與大件行李"],"status":"待細排"},
+    {"date":"02/06","day":"Sat","region":"東京","title":"返台","summary":"14:25 成田 → 17:55 台中","details":["預留足夠時間前往機場","完成退稅／行李托運"],"status":"已定"}
+  ],
   "todos": [
-    {"category":"旅遊","text":"預約 1/31 Ginzan Onsen Twilight Trip（日文自由散策版）","status":"待處理"},
-    {"category":"住宿","text":"等待瀧之湯回覆浴缸與 1/31 晚餐最晚開始時間","status":"待外部回覆"},
-    {"category":"交通","text":"確認 1/31 山形→天童正式 JR 時刻及瀧之湯接站時間","status":"待處理"},
-    {"category":"滑雪","text":"加入日本藏王教練價格頁，與台灣室內課程比較","status":"待處理"}
+    {"category":"旅遊","priority":"高","text":"預約 1/31 Ginzan Onsen Twilight Trip（日文自由散策版）","status":"待處理"},
+    {"category":"住宿","priority":"高","text":"等待瀧之湯回覆浴缸安排與 1/31 晚餐最晚開始時間","status":"待外部回覆"},
+    {"category":"交通","priority":"高","text":"確認 1/31 山形→天童正式 JR 時刻及瀧之湯接站時間","status":"待處理"},
+    {"category":"滑雪","priority":"高","text":"確認藏王中文教練方案與價格","status":"待處理"},
+    {"category":"滑雪","priority":"中","text":"確認四季雪具租借是否可預約／長租寄放","status":"待處理"},
+    {"category":"東京","priority":"中","text":"決定 2/03–2/06 東京住宿","status":"待處理"},
+    {"category":"滑雪","priority":"中","text":"比較台灣短期室內課程，決定是否先上 4 堂","status":"比較中"}
+  ],
+  "skiReferences": [
+    {
+      "country":"台灣","provider":"CitySki 台中","sport":"Snowboard","plan":"初階 4 堂",
+      "price":"NT$3,600","unit":"NT$900／堂","duration":"每堂約 1 小時",
+      "fit":"最符合目前「出國前短期先學」需求",
+      "note":"4 堂制，不必一次買到 8 堂；適合先建立基礎動作，再到藏王接雪場教練。",
+      "url":"https://www.cityski.com.tw/page-4/","checked":"2026-10-06"
+    },
+    {
+      "country":"台灣","provider":"iSKI","sport":"Snowboard","plan":"初階 8 堂",
+      "price":"NT$15,900","unit":"約 NT$1,988／堂","duration":"每堂約 50 分鐘",
+      "fit":"完整基礎課程",
+      "note":"課程較完整，包含基本煞車、方向控制與落葉飄等。",
+      "url":"https://www.iski.com.tw/information/13","checked":"2026-10-06"
+    },
+    {
+      "country":"台灣","provider":"SNOWIN","sport":"Snowboard / Ski","plan":"初階私人 1對1／8堂",
+      "price":"NT$19,350／人","unit":"約 NT$2,419／堂","duration":"依官方方案",
+      "fit":"希望較密集私人訓練",
+      "note":"另有初階團體 8 堂 NT$15,800／人；後續與日本教練一起比較。",
+      "url":"https://snowin.com.tw/pages/indoor-lesson","checked":"2026-10-06"
+    }
+  ],
+  "recentChanges": [
+    {"date":"2026-10-06","text":"SKI-2027 正式轉移至 GitHub Pages，新增滑雪參考資料區。"},
+    {"date":"2026-10-03","text":"四季第 2 筆住宿金額與付款紀錄重新核對。"},
+    {"date":"2026-10-02","text":"瀧之湯 3 晚已訂；銀山改採 Twilight Trip；更新 1/31 接駁與 JR 動線。"}
+  ],
+  "sources": [
+    {"label":"CitySki 室內滑雪課程","url":"https://www.cityski.com.tw/page-4/"},
+    {"label":"iSKI 課程資訊","url":"https://www.iski.com.tw/information/13"},
+    {"label":"SNOWIN 室內課程","url":"https://snowin.com.tw/pages/indoor-lesson"},
+    {"label":"SKI-2027 GitHub","url":"https://github.com/LeeDante/SKI-2027"}
   ]
 }
