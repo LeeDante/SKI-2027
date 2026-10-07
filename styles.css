@@ -213,3 +213,7 @@ img,svg{max-width:100%}
   .budget-stats,.mini-grid{grid-template-columns:1fr}
   .hero-photo{height:330px}.hero h1{font-size:30px}
 }
+
+/* Desktop itinerary tags visibility fix */
+.itinerary-item .itinerary-tags{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important;margin-top:7px!important;width:100%!important;visibility:visible!important;opacity:1!important}
+.itinerary-item .itinerary-tag{display:inline-flex!important;visibility:visible!important;align-items:center;justify-content:center;min-height:22px}
