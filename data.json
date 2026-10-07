@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 14:58",
+    "lastUpdated": "2026-10-07 15:07",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -431,6 +431,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026-10-07 15:07",
+      "text": "美食專區加入第一批四地區午餐、晚餐、小吃候選，補上料理簡介、特色、參考價格、預約方式、菜單形式與親子適合度。"
+    },
+    {
       "date": "2026-10-07 14:58",
       "text": "新增「美食｜午餐・晚餐・小吃」專區，固定分仙台、藏王、山形／天童、東京四區；建立網路預約、可視菜單、兒童友善與參考價格等篩選欄位。"
     },
@@ -718,33 +722,205 @@
     {
       "region": "仙台",
       "meals": {
-        "lunch": [],
-        "dinner": [],
-        "snack": []
+        "lunch": [
+          {
+            "name": "牛たん料理 閣／仙台牛舌候選",
+            "category": "牛舌",
+            "price": "約 ¥2,000～3,500",
+            "note": "厚切牛舌是仙台代表料理；午餐比晚餐更容易彈性安排，適合採買或市區日。特色是炭火香氣與麥飯、牛尾湯的經典組合。",
+            "reservation": "網路訂位優先確認",
+            "menu": "圖片／文字菜單",
+            "family": "適合",
+            "url": "https://gyutankaku-online.com/"
+          },
+          {
+            "name": "仙台站牛舌通",
+            "category": "牛舌多店選擇",
+            "price": "約 ¥2,000～3,500",
+            "note": "仙台站內一次集合多家牛舌名店，最大特色是交通零負擔；抵達日或臨時改行程時最好用。",
+            "reservation": "多數現場候位",
+            "menu": "店頭實體／圖片菜單",
+            "family": "適合",
+            "url": "https://www.livit.jregroup.ne.jp/detail/213"
+          }
+        ],
+        "dinner": [
+          {
+            "name": "田なか屋本店 仙台駅前",
+            "category": "仙台鄉土料理・せり鍋",
+            "price": "せり鍋 ¥1,980／人起",
+            "note": "冬季仙台很值得留一餐的芹菜鍋；芹菜連根入鍋，香氣清爽、口感脆。另有牛舌、鮭魚卵等宮城料理，可避免全家只能吃鍋。",
+            "reservation": "可網路預約",
+            "menu": "官網完整圖文菜單",
+            "family": "適合；有包廂",
+            "url": "https://tanakayasendai.owst.jp/"
+          },
+          {
+            "name": "牛たん焼専門店 司 東口店",
+            "category": "牛舌",
+            "price": "約 ¥2,000～4,000",
+            "note": "仙台站東口方便，適合1/25狐狸村＋草莓回仙台後安排。主打炭火牛舌，作為旅行中正式的牛舌晚餐。",
+            "reservation": "可事先確認訂位",
+            "menu": "實體／圖文菜單",
+            "family": "適合",
+            "url": "https://www.gyutan-tsukasa.com/view/page/shop"
+          }
+        ],
+        "snack": [
+          {
+            "name": "ずんだ茶寮 仙台駅店",
+            "category": "毛豆甜點",
+            "price": "約 ¥300～1,000",
+            "note": "仙台代表性小吃。推薦ずんだシェイク、毛豆麻糬；甜鹹豆香很有東北特色，仙台站順路就能吃。",
+            "reservation": "不需預約",
+            "menu": "櫃位圖文菜單",
+            "family": "很適合",
+            "url": "https://zundasaryo.com/"
+          }
+        ]
       }
     },
     {
       "region": "藏王",
       "meals": {
-        "lunch": [],
-        "dinner": [],
-        "snack": []
+        "lunch": [
+          {
+            "name": "藏王溫泉街／雪場午餐候選",
+            "category": "雪場料理",
+            "price": "約 ¥1,000～2,000",
+            "note": "滑雪日午餐以不脫離雪場動線為原則，優先拉麵、咖哩、丼飯等快速熱食；特色不是名店，而是保留滑雪時間。",
+            "reservation": "通常不需預約",
+            "menu": "店頭實體菜單",
+            "family": "適合",
+            "url": "https://www.zao-spa.or.jp/"
+          }
+        ],
+        "dinner": [
+          {
+            "name": "藏王四季のホテル｜旬の會席料理",
+            "category": "飯店會席",
+            "price": "住宿方案內",
+            "note": "藏王住宿期間的主力晚餐。使用山形在地與季節食材，菜色隨季節調整；17:30～19:00開始，滑雪後不用再冒雪外出。",
+            "reservation": "隨住宿方案",
+            "menu": "會席內容／現場說明",
+            "family": "住宿客適合",
+            "url": "https://www.zao-shikinohotel.jp/dishes/"
+          }
+        ],
+        "snack": [
+          {
+            "name": "藏王溫泉街甜點／熱飲",
+            "category": "滑雪後點心",
+            "price": "約 ¥300～1,000",
+            "note": "保留為滑雪後彈性項目，優先熱飲、布丁、冰淇淋或山形水果甜點；不為吃小吃特別繞遠。",
+            "reservation": "不需預約",
+            "menu": "店頭菜單",
+            "family": "適合",
+            "url": "https://www.zao-spa.or.jp/"
+          }
+        ]
       }
     },
     {
       "region": "山形／天童",
       "meals": {
-        "lunch": [],
-        "dinner": [],
-        "snack": []
+        "lunch": [
+          {
+            "name": "天童蕎麥｜そば処候選",
+            "category": "山形蕎麥",
+            "price": "約 ¥1,000～2,000",
+            "note": "山形是蕎麥名產地，適合安排一餐板蕎麥或冷／熱蕎麥。天童有多間親子可入店的蕎麥店，之後依山寺或飯店動線鎖定。",
+            "reservation": "依店家；午餐可彈性",
+            "menu": "實體菜單",
+            "family": "適合",
+            "url": "https://www.tendodays.com/"
+          }
+        ],
+        "dinner": [
+          {
+            "name": "ほほえみの宿 滝の湯｜米澤牛壽喜燒會席",
+            "category": "米澤牛・會席",
+            "price": "住宿方案內",
+            "note": "已訂住宿包含的重點晚餐。主角是山形代表品牌牛米澤牛壽喜燒，搭配季節會席；1/31仍需確認與銀山Twilight Trip時間是否衝突。",
+            "reservation": "已隨住宿預訂",
+            "menu": "會席／飯店提供",
+            "family": "適合",
+            "url": "https://www.takinoyu.com/"
+          }
+        ],
+        "snack": [
+          {
+            "name": "天童／山形水果甜點",
+            "category": "水果・甜點",
+            "price": "約 ¥500～1,500",
+            "note": "山形以櫻桃、洋梨、葡萄等水果聞名；冬季以洋梨加工甜點、果凍、蛋糕與伴手禮為主，安排在天童散步時順吃即可。",
+            "reservation": "通常不需預約",
+            "menu": "店頭圖文菜單",
+            "family": "很適合",
+            "url": "https://yamagatakanko.com/"
+          }
+        ]
       }
     },
     {
       "region": "東京",
       "meals": {
-        "lunch": [],
-        "dinner": [],
-        "snack": []
+        "lunch": [
+          {
+            "name": "上野の杜 韻松亭",
+            "category": "日本料理・豆腐湯葉",
+            "price": "午餐 ¥3,000 起",
+            "note": "位在上野公園內，適合博物館／上野公園日。花籠膳以豆腐、湯葉、生麩與季節小菜組成，日式感很強；另有兒童餐。",
+            "reservation": "可網路預約",
+            "menu": "官網圖文菜單",
+            "family": "適合；兒童餐 ¥1,900 起",
+            "url": "https://www.innsyoutei.jp/"
+          },
+          {
+            "name": "洋食 黒船亭",
+            "category": "東京老字號洋食",
+            "price": "約 ¥1,600～4,200",
+            "note": "上野老字號洋食，招牌是長時間熬製的多蜜醬；蛋包飯、漢堡排、燉牛肉都容易讓小孩接受，是連吃多天日式料理後的好替換。",
+            "reservation": "可網路預約",
+            "menu": "官網完整圖文菜單",
+            "family": "很適合",
+            "url": "https://www.kurofunetei.co.jp/"
+          }
+        ],
+        "dinner": [
+          {
+            "name": "洋食 黒船亭",
+            "category": "老字號洋食",
+            "price": "約 ¥2,000～5,000",
+            "note": "晚餐也適合，菜色選擇多，不需要套餐綁死。招牌多蜜醬、燉牛肉與蛋包飯適合家庭分食。",
+            "reservation": "可網路預約",
+            "menu": "官網完整圖文菜單",
+            "family": "很適合",
+            "url": "https://www.kurofunetei.co.jp/"
+          },
+          {
+            "name": "上野の杜 韻松亭",
+            "category": "日本料理",
+            "price": "晚餐 ¥7,800 起",
+            "note": "若想留一餐較正式的東京日式晚餐，可選鳥壽喜燒或季節會席；環境在上野公園內，氣氛比一般連鎖店完整。",
+            "reservation": "可網路預約",
+            "menu": "官網圖文菜單",
+            "family": "適合；有兒童料理",
+            "url": "https://www.innsyoutei.jp/"
+          }
+        ],
+        "snack": [
+          {
+            "name": "あんみつ みはし 上野本店／アトレ上野店",
+            "category": "東京甘味・あんみつ",
+            "price": "¥680 起",
+            "note": "1948年創業的上野甘味店。寒天、紅豆餡、蜜與水果組成的あんみつ是招牌；上野本店與車站內Atre店都方便，適合逛上野途中休息。",
+            "reservation": "小吃不需預約",
+            "menu": "官網完整圖文價格",
+            "family": "很適合",
+            "url": "https://www.mihashi.co.jp/"
+          }
+        ]
       }
     }
   ],
