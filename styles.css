@@ -65,3 +65,17 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 :root[data-theme="light"] .home-regions .region-card{background:linear-gradient(155deg,#edf6fc,#fff);border-color:#d7e5f0}
 :root[data-theme="light"] .home-regions .region-no{color:rgba(45,108,223,.18)}
 @media(max-width:720px){.hero{padding:18px 0 26px}.hero-photo{height:430px;border-radius:22px;background-position:62% center}.hero-copybox{left:22px;right:22px;bottom:25px}.hero h1{font-size:42px}.hero-copybox>p{font-size:16px}.home-overview{padding-top:34px}}
+
+.home-regions .region-card{isolation:isolate;background-position:center!important;background-size:cover!important}
+.home-regions .region-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,13,25,.08),rgba(5,14,27,.96))}
+.home-regions .region-01{background-image:linear-gradient(180deg,transparent,#071323),url("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=82")!important}
+.home-regions .region-02{background-image:linear-gradient(180deg,transparent,#071323),url("https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=900&q=82")!important}
+.home-regions .region-03{background-image:linear-gradient(180deg,transparent,#071323),url("https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=900&q=82")!important}
+.home-regions .region-04{background-image:linear-gradient(180deg,transparent,#071323),url("https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=900&q=82")!important}
+.home-regions .region-card h3{color:#fff}.home-regions .region-card p,.home-regions .date-line{color:#d5e3f1}.home-regions .region-no{color:rgba(255,255,255,.72)}
+.todo-card.priority-high{border:2px solid #ff7474;box-shadow:inset 4px 0 0 #ff7474}
+.todo-card.priority-medium{border:2px solid #f0bd58;box-shadow:inset 4px 0 0 #f0bd58}
+.todo-card.priority-low{border:2px solid #6d8eaf;box-shadow:inset 4px 0 0 #6d8eaf}
+.todo-card.priority-high .todo-meta .tag:last-child{color:#ff9696}
+.todo-card.priority-medium .todo-meta .tag:last-child{color:#f4ca76}
+.todo-card.priority-low .todo-meta .tag:last-child{color:#9bb7d2}
