@@ -103,3 +103,23 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 .food-meal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.food-meal-column{min-width:0}.food-meal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.food-meal-head strong{font-size:14px}.food-meal-head span{font-size:11px;color:var(--muted)}
 .food-card-list{display:grid;gap:8px}.food-card{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:12px}.food-card-top{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px}.food-card h4{font-size:15px;margin:7px 0 5px}.food-card p{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 8px}.food-tags{display:flex;flex-wrap:wrap;gap:5px}.food-tags span{font-size:10px;border:1px solid var(--line);border-radius:999px;padding:4px 6px;color:var(--muted)}.food-empty{border:1px dashed var(--line);border-radius:12px;padding:18px 10px;text-align:center;color:var(--muted);font-size:11px}
 @media(max-width:820px){.food-meal-grid{grid-template-columns:1fr}}
+
+/* Section color bands — subtle visual navigation */
+.section-tint{position:relative;margin-top:18px;margin-bottom:18px;padding-top:42px;padding-bottom:42px;border-radius:28px;isolation:isolate}
+.section-tint::before{content:"";position:absolute;inset:0 calc((100vw - 100%)/-2);z-index:-1;border-top:1px solid rgba(255,255,255,.025);border-bottom:1px solid rgba(255,255,255,.025);pointer-events:none}
+#dashboard.section-tint::before{background:rgba(92,119,150,.075)}
+#regions.section-tint::before{background:rgba(80,139,169,.075)}
+#itinerary.section-tint::before{background:rgba(76,142,126,.07)}
+#todos.section-tint::before{background:rgba(157,135,101,.07)}
+#miniTrips.section-tint::before{background:rgba(123,104,159,.075)}
+#food.section-tint::before{background:rgba(177,119,74,.075)}
+#references.section-tint::before{background:rgba(82,128,172,.075)}
+[data-theme="light"] #dashboard.section-tint::before{background:#f1f5f8}
+[data-theme="light"] #regions.section-tint::before{background:#eef6f8}
+[data-theme="light"] #itinerary.section-tint::before{background:#eff7f3}
+[data-theme="light"] #todos.section-tint::before{background:#f8f4ed}
+[data-theme="light"] #miniTrips.section-tint::before{background:#f5f1f8}
+[data-theme="light"] #food.section-tint::before{background:#fbf3eb}
+[data-theme="light"] #references.section-tint::before{background:#eef5fa}
+[data-theme="light"] .section-tint::before{border-color:rgba(35,55,75,.045)}
+@media(max-width:700px){.section-tint{margin-top:10px;margin-bottom:10px;padding-top:32px;padding-bottom:32px;border-radius:0}}
