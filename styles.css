@@ -38,3 +38,30 @@ linear-gradient(180deg,#b9d7ed 0%,#d9eaf6 50%,#f7fbfe 100%)}.eyebrow{font-size:1
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:28px 0 50px}
 @media(max-width:950px){.dashboard-grid,.itinerary-layout,.two-col{grid-template-columns:1fr}.region-grid{grid-template-columns:repeat(2,1fr)}.reference-grid{grid-template-columns:1fr}.itinerary-detail{position:static}.itinerary-list{max-height:none}.todo-grid{grid-template-columns:1fr}.hero-chip{display:none}}
 @media(max-width:720px){.topbar-inner{height:auto;padding:11px 0;align-items:flex-start;flex-wrap:wrap}.brand{width:100%}nav{order:3;justify-content:flex-start;overflow:auto;width:100%;padding-bottom:2px}nav a{white-space:nowrap}.theme-btn{position:absolute;right:16px;top:11px}.hero{min-height:auto;padding:42px 0}.hero h1{font-size:42px}.section-head{align-items:flex-start;flex-direction:column}.section-note{text-align:left}.region-grid{grid-template-columns:1fr}.dashboard-grid{grid-template-columns:1fr}.budget-stats,.mini-grid{grid-template-columns:1fr 1fr}.itinerary-item{grid-template-columns:62px 1fr}.detail-date{font-size:44px}}
+
+/* Homepage redesign v2 — restrained winter editorial */
+.hero{min-height:520px;padding:28px 0 36px;display:block}
+.hero:before,.hero:after{display:none}
+.hero-photo{height:480px;border-radius:28px;position:relative;overflow:hidden;border:1px solid #29425f;background:
+linear-gradient(90deg,rgba(5,17,31,.82) 0%,rgba(5,17,31,.48) 45%,rgba(5,17,31,.06) 78%),
+linear-gradient(0deg,rgba(5,17,31,.55),transparent 55%),
+url("https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1800&q=86") center 55%/cover no-repeat;
+box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.hero-copybox{position:absolute;left:42px;bottom:42px;max-width:720px}
+.hero h1{font-size:clamp(44px,6vw,76px);margin:10px 0 12px;color:#fff;text-shadow:0 3px 22px rgba(0,0,0,.35)}
+.hero-copybox>p{margin:0;color:#e2edf8;font-size:20px;letter-spacing:.02em}
+.hero .eyebrow{color:#91e4ff}.hero-meta span{background:rgba(5,18,34,.64);border-color:rgba(190,224,255,.24);color:#dcecff;backdrop-filter:blur(8px)}
+.home-overview{padding-top:48px}.home-overview .dashboard-grid{grid-template-columns:.82fr 1.18fr}
+.home-overview .panel{box-shadow:none}.home-overview .progress-panel{background:linear-gradient(145deg,#112b49,#101c30)}
+.home-regions{padding-top:44px}.home-regions .region-grid{gap:12px}
+.home-regions .region-card{min-height:320px;display:flex;flex-direction:column;border-color:#263d59;background:linear-gradient(160deg,#14263d,#101927)}
+.home-regions .region-card:nth-child(1){background:linear-gradient(180deg,rgba(12,26,44,.05),#101927 76%),linear-gradient(135deg,#355b7c,#13263d)}
+.home-regions .region-card:nth-child(2){background:linear-gradient(180deg,rgba(12,26,44,.05),#101927 76%),linear-gradient(135deg,#65839c,#18283a)}
+.home-regions .region-card:nth-child(3){background:linear-gradient(180deg,rgba(12,26,44,.05),#101927 76%),linear-gradient(135deg,#315d78,#172439)}
+.home-regions .region-card:nth-child(4){background:linear-gradient(180deg,rgba(12,26,44,.05),#101927 76%),linear-gradient(135deg,#243d68,#161d34)}
+.home-regions .region-no{font-size:64px;color:rgba(145,215,255,.25)}.home-regions .region-card h3{font-size:28px;margin-top:auto}
+:root[data-theme="light"] .hero-photo{border-color:#cadceb}
+:root[data-theme="light"] .home-overview .progress-panel{background:#fff}
+:root[data-theme="light"] .home-regions .region-card{background:linear-gradient(155deg,#edf6fc,#fff);border-color:#d7e5f0}
+:root[data-theme="light"] .home-regions .region-no{color:rgba(45,108,223,.18)}
+@media(max-width:720px){.hero{padding:18px 0 26px}.hero-photo{height:430px;border-radius:22px;background-position:62% center}.hero-copybox{left:22px;right:22px;bottom:25px}.hero h1{font-size:42px}.hero-copybox>p{font-size:16px}.home-overview{padding-top:34px}}
