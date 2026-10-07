@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b1220">
   <meta name="description" content="SKI-2027 日本東北冬旅計畫">
   <title>SKI-2027 日本東北冬旅</title>
-  <link rel="stylesheet" href="styles.css?v=202610071558">
+  <link rel="stylesheet" href="styles.css?v=202610071625">
 </head>
 <body>
 <header class="topbar">
@@ -48,6 +48,35 @@
   <section id="regions" class="section shell section-tint home-regions">
     <div class="section-head"><div><div class="eyebrow">4 AREAS · 1 JOURNEY</div><h2>這趟旅程的四個章節</h2></div><div class="section-note">點開網站時，先看大方向，再往下看細節</div></div>
     <div id="regionGrid" class="region-grid"></div>
+  </section>
+
+  <section id="journeyTrack" class="section shell journey-track">
+    <div class="section-head"><div><div class="eyebrow">17 DAYS · JOURNEY TRACK</div><h2>東北雪旅移動軌跡</h2></div><div class="section-note">仙台 → 藏王 → 山形／天童 → 東京 → 成田</div></div>
+    <div class="track-map" role="img" aria-label="SKI-2027 仙台、藏王、山形天童、東京與成田的旅行移動軌跡圖">
+      <svg viewBox="0 0 1200 520" aria-hidden="true">
+        <defs>
+          <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263b4b"/><stop offset="1" stop-color="#142733"/></linearGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <path class="jp-land" d="M715 18 C678 42 657 76 643 113 C630 146 612 169 594 194 C573 222 563 253 555 283 C545 319 527 350 506 378 C487 403 466 429 445 459 C431 479 420 497 415 516 L611 516 C617 487 630 460 650 436 C673 408 696 381 713 351 C730 321 737 291 742 260 C747 229 760 202 778 176 C796 150 808 122 813 92 C817 65 809 39 793 18 Z"/>
+        <path class="coast-detail" d="M645 111 C681 125 714 119 748 96 M592 194 C625 207 666 207 704 190 M553 284 C590 296 631 291 674 273 M506 378 C548 390 591 382 630 360 M446 459 C489 472 534 464 572 443"/>
+        <path class="route sendai-route" d="M720 142 C688 162 654 178 625 197"/>
+        <path class="route zao-route" d="M625 197 C594 202 568 190 548 179"/>
+        <path class="route yamagata-route" d="M548 179 C565 224 552 263 536 306 C522 344 505 380 488 411"/>
+        <path class="route tokyo-route" d="M488 411 C482 430 477 449 475 468 C520 479 568 477 620 465"/>
+        <path class="branch yamagata-route" d="M548 179 C520 148 498 126 475 105"/>
+        <path class="branch yamagata-route" d="M548 179 C520 184 493 192 468 207"/>
+        <g class="node sendai-node"><circle cx="720" cy="142" r="11"/><circle cx="720" cy="142" r="4"/><text x="742" y="136">仙台</text><text class="sub" x="742" y="155">1/21–1/26</text></g>
+        <g class="node zao-node"><circle cx="625" cy="197" r="11"/><circle cx="625" cy="197" r="4"/><text x="646" y="194">藏王</text><text class="sub" x="646" y="213">1/26–1/31</text></g>
+        <g class="node yamagata-node"><circle cx="548" cy="179" r="11"/><circle cx="548" cy="179" r="4"/><text x="367" y="174">山形／天童</text><text class="sub" x="397" y="194">1/31–2/3</text></g>
+        <g class="side-node"><circle cx="475" cy="105" r="5"/><text x="393" y="98">銀山溫泉</text><circle cx="468" cy="207" r="5"/><text x="395" y="229">山寺</text></g>
+        <g class="node tokyo-node"><circle cx="475" cy="468" r="11"/><circle cx="475" cy="468" r="4"/><text x="392" y="458">東京</text><text class="sub" x="378" y="478">2/3–2/6</text></g>
+        <g class="node narita-node"><circle cx="620" cy="465" r="8"/><text x="640" y="460">成田</text><text class="sub" x="640" y="479">2/6 返程</text></g>
+        <text class="map-label" x="676" y="92">宮城</text><text class="map-label" x="515" y="244">山形</text><text class="map-label" x="568" y="354">福島</text><text class="map-label" x="442" y="505">東京</text>
+        <text class="sea-label" x="860" y="300">PACIFIC OCEAN</text>
+      </svg>
+      <div class="track-legend"><span class="lg-sendai">● 仙台</span><span class="lg-zao">● 藏王</span><span class="lg-yamagata">● 山形／天童</span><span class="lg-tokyo">● 東京</span></div>
+    </div>
   </section>
 
   <section id="itinerary" class="section shell section-tint">
@@ -111,6 +140,6 @@
 </main>
 
 <footer><div class="shell">SKI-2027 · GitHub Pages · <span id="footerUpdated"></span></div></footer>
-<script src="app.js?v=202610071545"></script>
+<script src="app.js?v=202610071625"></script>
 </body>
 </html>
