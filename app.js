@@ -75,13 +75,15 @@ function itineraryTags(x){
 function renderItinerary(){
   $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>{
     const tags=itineraryTags(x);
+    const tagHtml=tags.map(t=>'<span class="schedule-slot '+(t.filled?'is-filled':'is-empty')+'">'+t.label+'</span>').join('');
     return `
-    <button class="itinerary-item region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
-      <div class="itinerary-mainline">
-        <span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span>
+    <button class="itinerary-item itinerary-row region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
+      <div class="itinerary-row-top">
+        <span class="itinerary-date">${x.date}</span>
+        <span class="itinerary-day">${x.day}</span>
         <strong class="itinerary-one-line">${x.title}</strong>
       </div>
-      <div class="itinerary-tags">${tags.map(t=>'<span class="itinerary-tag '+(t.filled?'filled':'missing')+'">'+t.label+'</span>').join('')}</div>
+      <div class="itinerary-row-slots">${tagHtml}</div>
     </button>`;
   }).join('');
   $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{
