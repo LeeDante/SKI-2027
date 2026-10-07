@@ -61,12 +61,33 @@ function renderRegions(){
     </article>`).join('');
 }
 
+function itineraryTags(x){
+  const text=[x.title,x.summary,...(x.details||[])].join('｜');
+  const rules=[
+    ['上午',/早上|上午|早餐|09:|10:|11:|樹冰/],
+    ['午餐',/午餐|中午|12:|13:00/],
+    ['下午',/下午|14:|15:|16:|採草莓|水族館/],
+    ['晚餐',/晚餐|晚間|晚上/],
+    ['交通',/→|JR|接駁|巴士|新幹線|移動|回程|前往|交通|機場|遊船/],
+    ['住宿',/入住|飯店|住宿|換房|退房|四季|瀧之湯/],
+    ['滑雪',/滑雪|教練|雪具|綠線/],
+    ['景點',/松島|鹽竈|狐狸村|山寺|銀山|Twilight|自由行|市區|採買/]
+  ];
+  return rules.filter(([,re])=>re.test(text)).map(([label])=>label);
+}
+
 function renderItinerary(){
-  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>`
+  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>{
+    const tags=itineraryTags(x);
+    return `
     <button class="itinerary-item region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
-      <div><span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span></div>
-      <div class="itinerary-title"><strong>${x.title}</strong><span>${x.region} · ${x.summary}</span></div>
-    </button>`).join('');
+      <div class="itinerary-mainline">
+        <span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span>
+        <strong class="itinerary-one-line">${x.title}｜${x.summary}</strong>
+      </div>
+      <div class="itinerary-tags">${tags.map(t=>'<span class="itinerary-tag">'+t+'</span>').join('')}</div>
+    </button>`;
+  }).join('');
   $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{
     $$('.itinerary-item').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');
