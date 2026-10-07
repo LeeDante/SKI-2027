@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 13:01",
+    "lastUpdated": "2026-10-07 13:05",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -418,6 +418,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026-10-07 13:05",
+      "text": "迷你行程新增採草莓候選：仙台狐狸村＋採草莓、MIGAKI FARM、狐狸村＋採水果、JR水果公園仙台荒濱，以及山形寒河江雪中採草莓；同步加入2大1小價格欄位。"
+    },
+    {
       "date": "2026-10-07 13:01",
       "text": "迷你單日行程新增參考價格：顯示平台目前起價與「2大1小」台幣總價估算；兒童價未公開者以3人同價保守估算，包車則按每車價格計算。"
     },
@@ -489,6 +493,71 @@
     }
   ],
   "miniDayTrips": [
+    {
+      "region": "仙台",
+      "platform": "Klook",
+      "title": "藏王狐狸村＋採草莓半日遊",
+      "from": "仙台出發",
+      "duration": "半日",
+      "fit": "狐狸村＋約30分鐘草莓吃到飽；2026年1–2月已有實際旅客參加紀錄，與你的1月下旬季節高度吻合。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.klook.com/zh-TW/activity/183472-zao-fox-village-fruit-picking-half-day-experience/",
+      "priceLabel": "價格待2027日期開放",
+      "familyPrice": "待估",
+      "priceNote": "2026冬季商品正常營運；待2027日曆開放後補2大1小實價"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "金蛇水神社＋MIGAKI FARM 採草莓",
+      "from": "JR仙台站東口 13:00",
+      "duration": "約4.5–5小時",
+      "fit": "中文領隊；下午半日團，MIGAKI品牌草莓吃到飽，可保留上午安排仙台市區。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.kkday.com/zh-tw/product/570442",
+      "priceLabel": "價格待2027日期開放",
+      "familyPrice": "待估",
+      "priceNote": "需6人成團；待2027日曆開放後補2大1小實價"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "藏王狐狸村＋採水果體驗一日遊",
+      "from": "仙台出發",
+      "duration": "約6小時",
+      "fit": "中文／英文；含狐狸村門票與當季採果，商品明列草莓採摘幾乎全年，但依當日生長狀況安排。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.kkday.com/zh-tw/product/183081",
+      "priceLabel": "價格待2027日期開放",
+      "familyPrice": "待估",
+      "priceNote": "最低15人成團；待2027日曆開放後補2大1小實價"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "JR水果公園仙台荒濱｜採草莓＋午餐",
+      "from": "自行前往仙台荒濱",
+      "duration": "約2小時",
+      "fit": "採草莓＋蔬菜咖哩＋迷你霜淇淋；2026草莓方案為1/1–3/31，適合做短版親子行程。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.kkday.com/zh-tw/product/157956",
+      "priceLabel": "2026方案已售罄／2027待開放",
+      "familyPrice": "待估",
+      "priceNote": "季節吻合；等2027方案上架後補2大1小價格"
+    },
+    {
+      "region": "山形／天童",
+      "platform": "官方",
+      "title": "寒河江 いちごガーデン｜雪中採草莓",
+      "from": "寒河江市・自行前往",
+      "duration": "10:00–15:00營業",
+      "fit": "雪中草莓採摘；上一季開放至3/31。11歲小孩按小學生價計。",
+      "dateStatus": "2027 待開放",
+      "url": "https://yamagatakanko.com/attractions/detail_14164.html",
+      "priceLabel": "2026：大人¥2,500／小學生¥1,700",
+      "familyPrice": "約 NT$1,474",
+      "priceNote": "2大1小＝¥6,700；以專案匯率1 JPY＝NT$0.22估算，2027價格待公布"
+    },
     {
       "region": "仙台",
       "platform": "KKday",
