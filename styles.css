@@ -217,3 +217,13 @@ img,svg{max-width:100%}
 /* Desktop itinerary tags visibility fix */
 .itinerary-item .itinerary-tags{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important;margin-top:7px!important;width:100%!important;visibility:visible!important;opacity:1!important}
 .itinerary-item .itinerary-tag{display:inline-flex!important;visibility:visible!important;align-items:center;justify-content:center;min-height:22px}
+
+/* Itinerary explicit two-row structure — independent of legacy tag rules */
+.itinerary-row{display:flex!important;flex-direction:column!important;gap:0!important;grid-template-columns:none!important;min-height:62px!important;height:auto!important;overflow:visible!important}
+.itinerary-row-top{display:flex!important;align-items:baseline!important;gap:7px!important;width:100%!important;min-width:0!important;white-space:nowrap!important}
+.itinerary-row-slots{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important;width:100%!important;margin-top:8px!important;min-height:23px!important}
+.schedule-slot{display:flex!important;align-items:center!important;justify-content:center!important;height:23px!important;padding:2px 5px!important;border-radius:7px!important;font-size:10px!important;font-weight:850!important;line-height:1!important;visibility:visible!important}
+.schedule-slot.is-filled{border:1px solid color-mix(in srgb,var(--region-color) 72%,var(--line))!important;background:color-mix(in srgb,var(--region-color) 24%,var(--panel))!important;color:color-mix(in srgb,var(--region-color) 70%,white)!important;opacity:1!important}
+.schedule-slot.is-empty{border:1px dashed color-mix(in srgb,var(--muted) 55%,transparent)!important;background:transparent!important;color:var(--muted)!important;opacity:.48!important}
+[data-theme="light"] .schedule-slot.is-filled{color:color-mix(in srgb,var(--region-color) 78%,#263b45)!important}
+@media(max-width:720px){.itinerary-row{min-height:58px!important}.schedule-slot{font-size:9px!important;height:21px!important}.itinerary-row-slots{margin-top:6px!important}}
