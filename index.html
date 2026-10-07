@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b1220">
   <meta name="description" content="SKI-2027 日本東北冬旅計畫">
   <title>SKI-2027 日本東北冬旅</title>
-  <link rel="stylesheet" href="styles.css?v=202610071625">
+  <link rel="stylesheet" href="styles.css?v=202610071642">
 </head>
 <body>
 <header class="topbar">
@@ -51,31 +51,36 @@
   </section>
 
   <section id="journeyTrack" class="section shell journey-track">
-    <div class="section-head"><div><div class="eyebrow">17 DAYS · JOURNEY TRACK</div><h2>東北雪旅移動軌跡</h2></div><div class="section-note">仙台 → 藏王 → 山形／天童 → 東京 → 成田</div></div>
-    <div class="track-map" role="img" aria-label="SKI-2027 仙台、藏王、山形天童、東京與成田的旅行移動軌跡圖">
-      <svg viewBox="0 0 1200 520" aria-hidden="true">
-        <defs>
-          <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263b4b"/><stop offset="1" stop-color="#142733"/></linearGradient>
-          <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <path class="jp-land" d="M715 18 C678 42 657 76 643 113 C630 146 612 169 594 194 C573 222 563 253 555 283 C545 319 527 350 506 378 C487 403 466 429 445 459 C431 479 420 497 415 516 L611 516 C617 487 630 460 650 436 C673 408 696 381 713 351 C730 321 737 291 742 260 C747 229 760 202 778 176 C796 150 808 122 813 92 C817 65 809 39 793 18 Z"/>
-        <path class="coast-detail" d="M645 111 C681 125 714 119 748 96 M592 194 C625 207 666 207 704 190 M553 284 C590 296 631 291 674 273 M506 378 C548 390 591 382 630 360 M446 459 C489 472 534 464 572 443"/>
-        <path class="route sendai-route" d="M720 142 C688 162 654 178 625 197"/>
-        <path class="route zao-route" d="M625 197 C594 202 568 190 548 179"/>
-        <path class="route yamagata-route" d="M548 179 C565 224 552 263 536 306 C522 344 505 380 488 411"/>
-        <path class="route tokyo-route" d="M488 411 C482 430 477 449 475 468 C520 479 568 477 620 465"/>
-        <path class="branch yamagata-route" d="M548 179 C520 148 498 126 475 105"/>
-        <path class="branch yamagata-route" d="M548 179 C520 184 493 192 468 207"/>
-        <g class="node sendai-node"><circle cx="720" cy="142" r="11"/><circle cx="720" cy="142" r="4"/><text x="742" y="136">仙台</text><text class="sub" x="742" y="155">1/21–1/26</text></g>
-        <g class="node zao-node"><circle cx="625" cy="197" r="11"/><circle cx="625" cy="197" r="4"/><text x="646" y="194">藏王</text><text class="sub" x="646" y="213">1/26–1/31</text></g>
-        <g class="node yamagata-node"><circle cx="548" cy="179" r="11"/><circle cx="548" cy="179" r="4"/><text x="367" y="174">山形／天童</text><text class="sub" x="397" y="194">1/31–2/3</text></g>
-        <g class="side-node"><circle cx="475" cy="105" r="5"/><text x="393" y="98">銀山溫泉</text><circle cx="468" cy="207" r="5"/><text x="395" y="229">山寺</text></g>
-        <g class="node tokyo-node"><circle cx="475" cy="468" r="11"/><circle cx="475" cy="468" r="4"/><text x="392" y="458">東京</text><text class="sub" x="378" y="478">2/3–2/6</text></g>
-        <g class="node narita-node"><circle cx="620" cy="465" r="8"/><text x="640" y="460">成田</text><text class="sub" x="640" y="479">2/6 返程</text></g>
-        <text class="map-label" x="676" y="92">宮城</text><text class="map-label" x="515" y="244">山形</text><text class="map-label" x="568" y="354">福島</text><text class="map-label" x="442" y="505">東京</text>
-        <text class="sea-label" x="860" y="300">PACIFIC OCEAN</text>
-      </svg>
-      <div class="track-legend"><span class="lg-sendai">● 仙台</span><span class="lg-zao">● 藏王</span><span class="lg-yamagata">● 山形／天童</span><span class="lg-tokyo">● 東京</span></div>
+    <div class="journey-poster">
+      <div class="poster-head"><span>SKI-2027</span><strong>17 DAYS</strong><em>JOURNEY TRACK</em><small>東北の雪景色から東京へ</small></div>
+      <div class="poster-timeline">
+        <div class="pt sendai"><b>1/21 – 1/26</b><strong>仙台 <small>SENDAI</small></strong><span>松島・市區散策・美食</span></div>
+        <div class="pt zao"><b>1/26 – 1/31</b><strong>藏王 <small>ZAO</small></strong><span>滑雪・樹冰・溫泉</span></div>
+        <div class="pt yamagata"><b>1/31 – 2/3</b><strong>山形／天童</strong><span>銀山溫泉・山寺・溫泉旅館</span></div>
+        <div class="pt tokyo"><b>2/3 – 2/6</b><strong>東京 <small>TOKYO</small></strong><span>都會散策・購物・美食</span></div>
+      </div>
+      <div class="poster-map">
+        <svg viewBox="0 0 650 700" aria-label="SKI-2027 東北至東京旅行軌跡">
+          <defs><linearGradient id="terrain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#314754"/><stop offset=".45" stop-color="#172d39"/><stop offset="1" stop-color="#0c202b"/></linearGradient><filter id="trackGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <path class="terrain" d="M420 0C367 47 354 92 342 138c-12 44-46 73-58 119-14 53 1 95-21 146-21 48-68 85-83 138-14 51-9 102-28 159l210 100c25-55 45-100 72-145 28-47 50-96 54-151 4-53 21-95 49-139 27-43 44-92 38-143-5-44-20-83-46-122z"/>
+          <path class="terrain-lines" d="M339 91c51 18 99 15 142-7M286 203c57 20 116 14 165-10M258 330c54 18 111 12 159-11M194 469c59 18 117 8 165-18M163 589c54 16 106 8 151-14"/>
+          <path class="r r1" d="M448 155C408 174 373 194 340 224"/><path class="r r2" d="M340 224c-26 8-50 1-72-12"/><path class="r r3" d="M268 212c17 74 4 139-25 203-27 60-51 112-62 171"/><path class="r r4" d="M181 586c34 34 71 51 113 63"/>
+          <path class="side s1" d="M268 212c-28-31-53-58-82-76"/><path class="side s2" d="M268 212c-35 7-66 22-93 42"/>
+          <g class="m sendai"><circle cx="448" cy="155" r="13"/><circle cx="448" cy="155" r="5"/><text x="470" y="151">仙台</text><text class="sub" x="470" y="172">SENDAI</text></g>
+          <g class="m zao"><circle cx="340" cy="224" r="13"/><circle cx="340" cy="224" r="5"/><text x="362" y="220">藏王</text><text class="sub" x="362" y="241">ZAO</text></g>
+          <g class="m yamagata"><circle cx="268" cy="212" r="13"/><circle cx="268" cy="212" r="5"/><text x="82" y="207">山形／天童</text><text class="sub" x="119" y="228">YAMAGATA / TENDO</text></g>
+          <g class="minor"><circle cx="186" cy="136" r="6"/><text x="89" y="128">銀山溫泉</text><circle cx="175" cy="254" r="6"/><text x="113" y="278">山寺</text></g>
+          <g class="m tokyo"><circle cx="181" cy="586" r="13"/><circle cx="181" cy="586" r="5"/><text x="105" y="579">東京</text><text class="sub" x="99" y="600">TOKYO</text></g>
+          <g class="m tokyo"><circle cx="294" cy="649" r="9"/><text x="314" y="645">成田機場</text><text class="sub" x="314" y="665">NARITA</text></g>
+          <text class="pref" x="395" y="101">宮城県</text><text class="pref" x="208" y="317">山形県</text><text class="pref" x="257" y="443">福島県</text><text class="ocean" x="475" y="420">PACIFIC OCEAN</text>
+        </svg>
+      </div>
+      <div class="poster-cards">
+        <article class="pc sendai"><div class="pc-photo photo-sendai"></div><strong>仙台 <small>SENDAI</small></strong><span>1/21 – 1/26</span></article>
+        <article class="pc zao"><div class="pc-photo photo-zao"></div><strong>藏王 <small>ZAO</small></strong><span>1/26 – 1/31</span></article>
+        <article class="pc yamagata"><div class="pc-photo photo-yamagata"></div><strong>山形／天童</strong><span>1/31 – 2/3</span></article>
+        <article class="pc tokyo"><div class="pc-photo photo-tokyo"></div><strong>東京 <small>TOKYO</small></strong><span>2/3 – 2/6</span></article>
+      </div>
     </div>
   </section>
 
