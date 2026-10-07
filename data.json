@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 18:17",
+    "lastUpdated": "2026-10-07 20:05",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -84,7 +84,7 @@
       "status": "住宿已訂",
       "note": "ほほえみの宿 滝の湯；季之花 和風現代豪華客房・花園景觀；2大1小；米澤牛壽喜燒會席＋早晚餐。",
       "items": [
-        "銀山 Twilight Trip 待預約",
+        "銀山 Twilight Trip 已預約｜2大1小 ¥23,400｜Premium Fast Pass",
         "山寺",
         "天童周邊",
         "浴缸安排與 1/31 晚餐時間待回覆"
@@ -252,10 +252,10 @@
       "details": [
         "JR 山形→天童",
         "瀧之湯接站時間待確認",
-        "Ginzan Onsen Twilight Trip 方向已定・待預約",
+        "Ginzan Onsen Twilight Trip 已預約｜2大1小 ¥23,400｜Premium Fast Pass・免換票",
         "晚餐時間需與夜遊行程協調"
       ],
-      "status": "關鍵日"
+      "status": "銀山已預約"
     },
     {
       "date": "02/01",
@@ -360,13 +360,6 @@
       "status": "飯店評估中"
     },
     {
-      "category": "旅遊",
-      "priority": "高",
-      "title": "預約銀山 Twilight Trip",
-      "summary": "預約 1/31 日文自由散策版，並確認與晚餐時間銜接。",
-      "status": "待處理"
-    },
-    {
       "category": "交通",
       "priority": "高",
       "title": "確認 1/31 山形→天童",
@@ -430,6 +423,10 @@
     }
   ],
   "recentChanges": [
+    {
+      "date": "2026-10-07 20:05",
+      "text": "銀山溫泉冬季 Night Tour 已正式預約：1/31 天童出發，Premium Fast Pass／免換票，2大人 ¥19,600＋小學生 ¥3,800，合計 ¥23,400；預約待辦已完成並自清單移除。"
+    },
     {
       "date": "2026-10-07 18:17",
       "text": "依桌機截圖重建行程總覽列：不再沿用舊標籤結構，每日卡片固定為兩列，第二列獨立渲染上午、午餐、下午、晚餐四個時段標籤。"
