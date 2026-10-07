@@ -19,8 +19,8 @@ async function load(){
 function renderMeta(){
   $('#tripTitle').textContent = DATA.meta.title;
   $('#tripDates').textContent = DATA.meta.dates;
-  $('#lastUpdated').textContent = '更新 ' + DATA.meta.lastUpdated;
-  $('#footerUpdated').textContent = '最後更新 ' + DATA.meta.lastUpdated;
+  $('#lastUpdated').textContent = '更新 ' + DATA.meta.lastUpdated + (DATA.meta.timezone ? ' · ' + DATA.meta.timezone : '');
+  $('#footerUpdated').textContent = '最後更新 ' + DATA.meta.lastUpdated + (DATA.meta.timezone ? ' · ' + DATA.meta.timezone : '');
 }
 
 function renderDashboard(){
