@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 10:12",
+    "lastUpdated": "2026-10-07 10:23",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -410,6 +410,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026-10-07 10:23",
+      "text": "新增「迷你單日行程」：依仙台、山形／天童、東京排列 KKday／Klook 候選，排除既定藏王與銀山行程；未開放 2027 日期者標示「尚無日期可選」並排在各區尾端。"
+    },
+    {
       "date": "2026-10-07 10:12",
       "text": "修正 GitHub Pages 靜態資源快取：CSS／JavaScript 加入版本號，確保四地區照片卡與待辦重要度顏色框載入最新版。"
     },
@@ -458,6 +462,128 @@
     {
       "label": "SKI-2027 GitHub",
       "url": "https://github.com/LeeDante/SKI-2027"
+    }
+  ],
+  "miniDayTrips": [
+    {
+      "region": "仙台",
+      "platform": "Klook",
+      "title": "宮城松島日本三大景＋鹽竈神社＋多賀城南門一日遊",
+      "from": "仙台出發",
+      "duration": "約7.5小時",
+      "fit": "松島之外再加入鹽竈、多賀城，與既有藏王／銀山不重複。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/138912-miyagi-one-day-tour-visit-shiogama-shrine-enjoy-matsushima-scenery/"
+    },
+    {
+      "region": "仙台",
+      "platform": "Klook",
+      "title": "仙台大觀音＋松島購物一日遊",
+      "from": "仙台出發",
+      "duration": "09:30–19:00",
+      "fit": "大觀音＋松島，中文／英日韓導覽；適合作為仙台近郊整日方案。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/205873-sendai-dai-kannon-matsushima-full-day-tour-with-shopping/"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "仙台大觀音＋定義如來西方寺＋松島灣遊船",
+      "from": "仙台出發",
+      "duration": "約9小時",
+      "fit": "公共交通較不便的定義如來＋松島遊船，適合不自駕的一天。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/product/621965"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "平泉中尊寺＋猊鼻溪＋嚴美溪一日遊",
+      "from": "仙台出發",
+      "duration": "一日",
+      "fit": "世界遺產與溪谷景觀，與藏王、銀山完全不同線。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/destination/jp-miyagi-prefecture"
+    },
+    {
+      "region": "山形／天童",
+      "platform": "KKday",
+      "title": "最上川遊船之旅＋在地便當",
+      "from": "最上／新庄方向",
+      "duration": "約2小時",
+      "fit": "冬季可考慮的短版體驗；可與其他山形行程搭配，不含銀山與藏王。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/product/571966"
+    },
+    {
+      "region": "山形／天童",
+      "platform": "Klook",
+      "title": "最上川遊船＋羽黑山五重塔",
+      "from": "仙台／山形出發",
+      "duration": "08:00–18:00",
+      "fit": "最上川＋出羽三山方向；不重複既定銀山 Twilight Trip。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/235431-sendai-yamagata-full-day-mogami-river-cruise-haguro-san-pagoda-tour/"
+    },
+    {
+      "region": "東京",
+      "platform": "Klook",
+      "title": "鎌倉大佛＋江之島全日小團遊",
+      "from": "東京／新宿出發",
+      "duration": "約10小時",
+      "fit": "鎌倉大佛、江之電、鎌倉高校前、江之島、鶴岡八幡宮。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/104142-one-day-trip-to-kamakura-tokyo/"
+    },
+    {
+      "region": "東京",
+      "platform": "Klook",
+      "title": "日光東照宮＋華嚴瀑布＋中禪寺湖",
+      "from": "東京出發",
+      "duration": "約10小時",
+      "fit": "世界遺產＋冬季自然景觀，和東京市區採買形成不同選項。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/131443-nikko-1-day-tour-lunch-included-toshogu-shrine-lake-chuzenji/"
+    },
+    {
+      "region": "東京",
+      "platform": "Klook",
+      "title": "富士山五合目＋忍野八海＋河口湖",
+      "from": "東京出發",
+      "duration": "約10小時",
+      "fit": "冬春季有新倉山淺間公園路線；富士山經典近郊方案。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.klook.com/zh-TW/activity/163862-from-tokyo-mt-fuji-5th-station-and-oshino-hakkai-day-trip/"
+    },
+    {
+      "region": "東京",
+      "platform": "KKday",
+      "title": "鎌倉／江之島一日遊",
+      "from": "東京出發",
+      "duration": "一日",
+      "fit": "鎌倉大佛、江之電、灌籃高手平交道、江之島散策。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/category/jp-tokyo/experiences/list"
+    },
+    {
+      "region": "東京",
+      "platform": "KKday",
+      "title": "日光東照宮＋華嚴瀑布＋中禪寺湖",
+      "from": "東京出發",
+      "duration": "一日",
+      "fit": "日光經典路線，適合東京住宿期間抽一天往返。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/category/jp-tokyo/experiences/list"
+    },
+    {
+      "region": "東京",
+      "platform": "KKday",
+      "title": "輕井澤白絲瀑布＋雲場池＋舊輕井澤＋Outlet",
+      "from": "新宿出發",
+      "duration": "一日",
+      "fit": "冬季近郊＋Outlet，可和最後採買需求一起比較。",
+      "dateStatus": "尚無日期可選",
+      "url": "https://www.kkday.com/zh-tw/category/jp-tokyo/experiences/list"
     }
   ]
 }
