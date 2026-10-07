@@ -123,3 +123,17 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 [data-theme="light"] #references.section-tint::before{background:#eef5fa}
 [data-theme="light"] .section-tint::before{border-color:rgba(35,55,75,.045)}
 @media(max-width:700px){.section-tint{margin-top:10px;margin-bottom:10px;padding-top:32px;padding-bottom:32px;border-radius:0}}
+
+/* Four-region identity colors */
+:root{--sendai:#4fa7c7;--zao:#77aee8;--yamagata:#d99a5b;--tokyo:#b779a5}
+.itinerary-item{position:relative;overflow:hidden}
+.itinerary-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--region-color)}
+.itinerary-item.region-sendai{--region-color:var(--sendai);background:color-mix(in srgb,var(--sendai) 8%,var(--panel))}
+.itinerary-item.region-zao{--region-color:var(--zao);background:color-mix(in srgb,var(--zao) 8%,var(--panel))}
+.itinerary-item.region-yamagata{--region-color:var(--yamagata);background:color-mix(in srgb,var(--yamagata) 8%,var(--panel))}
+.itinerary-item.region-tokyo{--region-color:var(--tokyo);background:color-mix(in srgb,var(--tokyo) 8%,var(--panel))}
+.itinerary-item.active{border-color:var(--region-color);background:color-mix(in srgb,var(--region-color) 16%,var(--panel))}
+.itinerary-item .itinerary-date{color:var(--region-color)}
+.itinerary-detail.region-sendai{--region-color:var(--sendai)}.itinerary-detail.region-zao{--region-color:var(--zao)}.itinerary-detail.region-yamagata{--region-color:var(--yamagata)}.itinerary-detail.region-tokyo{--region-color:var(--tokyo)}
+.itinerary-detail{border-top:4px solid var(--region-color)}.itinerary-detail .detail-region,.itinerary-detail .detail-date{color:var(--region-color)}
+.change-more{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.change-more summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:800;padding:8px 0}.change-more-list{margin-top:4px;max-height:320px;overflow:auto}
