@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 10:48",
+    "lastUpdated": "2026-10-07 13:01",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -418,6 +418,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026-10-07 13:01",
+      "text": "迷你單日行程新增參考價格：顯示平台目前起價與「2大1小」台幣總價估算；兒童價未公開者以3人同價保守估算，包車則按每車價格計算。"
+    },
+    {
       "date": "2026-10-07 10:48",
       "text": "仙台迷你單日行程補入「藏王狐狸村＋松島」與「狐狸村半日包車」；維持排除銀山與藏王樹冰重複組合。"
     },
@@ -493,7 +497,10 @@
       "duration": "一日",
       "fit": "狐狸村＋松島一次完成；不含銀山與藏王樹冰，適合仙台住宿期間安排。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.kkday.com/zh-tw/category/jp-miyagi-zao-fox-village/day-tours/list"
+      "url": "https://www.kkday.com/zh-tw/category/jp-miyagi-zao-fox-village/day-tours/list",
+      "priceLabel": "NT$3,308 起／人",
+      "familyPrice": "約 NT$9,924 起",
+      "priceNote": "2大1小保守以 3 人同價估算；兒童價依下單日為準"
     },
     {
       "region": "仙台",
@@ -503,7 +510,10 @@
       "duration": "半日",
       "fit": "以狐狸村為主的短版方案，時間較彈性，可搭配仙台市區或採買。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.kkday.com/zh-tw/destination/jp-miyagi-zao-fox-village"
+      "url": "https://www.kkday.com/zh-tw/destination/jp-miyagi-zao-fox-village",
+      "priceLabel": "NT$5,435 起／車",
+      "familyPrice": "約 NT$5,435 起",
+      "priceNote": "包車價；2大1小共乘同車估算"
     },
     {
       "region": "仙台",
@@ -513,7 +523,10 @@
       "duration": "至18:30",
       "fit": "中文／日文；含午餐與門票。商品正常販售，但平台公開頁目前尚未顯示 2027/1/23–1/25 可訂日。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.klook.com/zh-TW/activity/202692-geibikei-gorge-chusonji-temple-full-day-world-heritage-tour/"
+      "url": "https://www.klook.com/zh-TW/activity/202692-geibikei-gorge-chusonji-temple-full-day-world-heritage-tour/",
+      "priceLabel": "NT$3,452 起／人",
+      "familyPrice": "約 NT$10,356 起",
+      "priceNote": "2大1小保守以 3 人同價估算；兒童價依下單日為準"
     },
     {
       "region": "仙台",
@@ -523,7 +536,10 @@
       "duration": "約10小時",
       "fit": "中文／日文；與藏王、銀山不重複。商品仍正常販售，2027 冬季日期待平台開放。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.kkday.com/zh-tw/product/576605"
+      "url": "https://www.kkday.com/zh-tw/product/576605",
+      "priceLabel": "約 NT$3,403 起／人",
+      "familyPrice": "約 NT$10,209 起",
+      "priceNote": "同類 KKday 平泉一日遊目前起價；2大1小以 3 人同價保守估算"
     },
     {
       "region": "仙台",
@@ -533,7 +549,10 @@
       "duration": "最長約3小時",
       "fit": "短版松島行程，可與仙台市區或採買拼成一天；比整日團更有彈性。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.klook.com/zh-TW/activity/202692-geibikei-gorge-chusonji-temple-full-day-world-heritage-tour/"
+      "url": "https://www.klook.com/zh-TW/activity/202692-geibikei-gorge-chusonji-temple-full-day-world-heritage-tour/",
+      "priceLabel": "價格待平台日期開放",
+      "familyPrice": "待估",
+      "priceNote": "目前無法取得可可靠換算的台幣方案價"
     },
     {
       "region": "山形／天童",
@@ -543,7 +562,10 @@
       "duration": "多時段可選",
       "fit": "無導覽、可自行安排時段；適合住天童時做半日＋其他景點組合。",
       "dateStatus": "2027 待開放",
-      "url": "https://www.kkday.com/zh-tw/product/101390-mogami-river-boat-sightseeing-cruise-yamagata"
+      "url": "https://www.kkday.com/zh-tw/product/101390-mogami-river-boat-sightseeing-cruise-yamagata",
+      "priceLabel": "價格待平台日期開放",
+      "familyPrice": "待估",
+      "priceNote": "目前無法取得可可靠換算的台幣方案價"
     },
     {
       "region": "東京",
@@ -553,7 +575,10 @@
       "duration": "08:00–17:00",
       "fit": "商品規則已明列 2027 年特殊日期，確認營運規劃已跨入 2027；2/4、2/5 的即時席位仍需以日曆為準。",
       "dateStatus": "2027 已有排程",
-      "url": "https://www.klook.com/zh-TW/activity/197909-tokyo-mount-fuji-full-day-private-charter-tour/"
+      "url": "https://www.klook.com/zh-TW/activity/197909-tokyo-mount-fuji-full-day-private-charter-tour/",
+      "priceLabel": "價格待平台日期開放",
+      "familyPrice": "待估",
+      "priceNote": "目前無法取得可可靠換算的台幣方案價"
     },
     {
       "region": "東京",
@@ -563,7 +588,10 @@
       "duration": "10小時",
       "fit": "中文司機；商品注意事項已列到 2027 年，適合 2大1小且可調整停留時間。",
       "dateStatus": "2027 已有排程",
-      "url": "https://www.kkday.com/zh-tw/product/594342"
+      "url": "https://www.kkday.com/zh-tw/product/594342",
+      "priceLabel": "價格待平台日期開放",
+      "familyPrice": "待估",
+      "priceNote": "目前無法取得可可靠換算的台幣方案價"
     },
     {
       "region": "東京",
@@ -573,7 +601,10 @@
       "duration": "10小時",
       "fit": "中文／英文；商品已列 2027 年營運注意日期，富士山與箱根一次完成。",
       "dateStatus": "2027 已有排程",
-      "url": "https://www.kkday.com/zh-tw/product/150923-mount-fuji-hakone-day-tour-lake-kawaguchi-tokyo"
+      "url": "https://www.kkday.com/zh-tw/product/150923-mount-fuji-hakone-day-tour-lake-kawaguchi-tokyo",
+      "priceLabel": "NT$1,567 起／人",
+      "familyPrice": "約 NT$4,701 起",
+      "priceNote": "同類 KKday 富士山箱根一日遊目前起價；2大1小以 3 人同價保守估算"
     },
     {
       "region": "東京",
@@ -583,7 +614,10 @@
       "duration": "約10小時",
       "fit": "中文／英文／日文；商品正常販售，2/4、2/5 是否有團仍以平台日曆為準。",
       "dateStatus": "2027 待確認席位",
-      "url": "https://www.kkday.com/zh-tw/product/150528-autumn-tokyo-nikko-tour-toshogu-shrine-nikko-city-street-iroha-mountain-trail-kegon-falls-lake-chuzenji"
+      "url": "https://www.kkday.com/zh-tw/product/150528-autumn-tokyo-nikko-tour-toshogu-shrine-nikko-city-street-iroha-mountain-trail-kegon-falls-lake-chuzenji",
+      "priceLabel": "NT$1,808 起／人",
+      "familyPrice": "約 NT$5,424 起",
+      "priceNote": "2大1小保守以 3 人同價估算；兒童價依下單日為準"
     }
   ]
 }
