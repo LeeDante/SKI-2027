@@ -117,6 +117,7 @@ function renderMiniTrips(){
           <div class="mini-trip-top"><span class="platform ${x.platform.toLowerCase()}">${x.platform}</span><span class="date-state">${x.dateStatus}</span></div>
           <h4>${x.title}</h4>
           <div class="mini-trip-meta">${x.from} · ${x.duration}</div>
+          <div class="mini-trip-price"><span>2大1小參考</span><strong>${x.familyPrice||"待估"}</strong><small>${x.priceLabel||""}｜${x.priceNote||""}</small></div>
           <p>${x.fit}</p>
           <a class="source-link" href="${x.url}" target="_blank" rel="noopener">查看 ${x.platform} 行程 ↗</a>
         </article>`).join('')}</div>
