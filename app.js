@@ -2,6 +2,8 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 const money = n => 'NT$ ' + Number(n).toLocaleString('zh-TW');
 
+const regionClass = r => r === '仙台' ? 'sendai' : r === '藏王' ? 'zao' : (r.includes('山形') || r.includes('天童')) ? 'yamagata' : 'tokyo';
+
 let DATA = null;
 
 async function load(){
@@ -61,7 +63,7 @@ function renderRegions(){
 
 function renderItinerary(){
   $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>`
-    <button class="itinerary-item ${i===0?'active':''}" data-i="${i}">
+    <button class="itinerary-item region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
       <div><span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span></div>
       <div class="itinerary-title"><strong>${x.title}</strong><span>${x.region} · ${x.summary}</span></div>
     </button>`).join('');
@@ -75,7 +77,9 @@ function renderItinerary(){
 
 function renderItineraryDetail(i){
   const x=DATA.itinerary[i];
-  $('#itineraryDetail').innerHTML=`
+  const detail=$('#itineraryDetail');
+  detail.className='panel itinerary-detail region-'+regionClass(x.region);
+  detail.innerHTML=`
     <div class="detail-top">
       <div><div class="detail-region">${x.region}</div><div class="detail-date">${x.date}</div></div>
       <span class="status detail-status">${x.status}</span>
@@ -170,7 +174,9 @@ function renderReferences(){
 }
 
 function renderFooterBlocks(){
-  $('#recentChanges').innerHTML=DATA.recentChanges.map(x=>'<div class="stack-item"><time>'+x.date+'</time><p>'+x.text+'</p></div>').join('');
+  const recent=DATA.recentChanges||[];
+  const visible=recent.slice(0,5);
+  $('#recentChanges').innerHTML=visible.map(x=>'<div class="stack-item"><time>'+x.date+'</time><p>'+x.text+'</p></div>').join('')+(recent.length>5?'<details class="change-more"><summary>查看較早更新（'+(recent.length-5)+'）</summary><div class="change-more-list">'+recent.slice(5).map(x=>'<div class="stack-item"><time>'+x.date+'</time><p>'+x.text+'</p></div>').join('')+'</div></details>':'');
   $('#sourceList').innerHTML=DATA.sources.map(x=>'<div class="stack-item"><p><a href="'+x.url+'" target="_blank" rel="noopener">'+x.label+' ↗</a></p></div>').join('');
 }
 
