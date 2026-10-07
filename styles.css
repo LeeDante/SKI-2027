@@ -137,3 +137,9 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 .itinerary-detail.region-sendai{--region-color:var(--sendai)}.itinerary-detail.region-zao{--region-color:var(--zao)}.itinerary-detail.region-yamagata{--region-color:var(--yamagata)}.itinerary-detail.region-tokyo{--region-color:var(--tokyo)}
 .itinerary-detail{border-top:4px solid var(--region-color)}.itinerary-detail .detail-region,.itinerary-detail .detail-date{color:var(--region-color)}
 .change-more{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.change-more summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:800;padding:8px 0}.change-more-list{margin-top:4px;max-height:320px;overflow:auto}
+
+/* Region-card borders use the same four-region identity colors */
+.home-regions .region-card.region-01{border:2px solid var(--sendai)}
+.home-regions .region-card.region-02{border:2px solid var(--zao)}
+.home-regions .region-card.region-03{border:2px solid var(--yamagata)}
+.home-regions .region-card.region-04{border:2px solid var(--tokyo)}
