@@ -107,13 +107,13 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 /* Section color bands — subtle visual navigation */
 .section-tint{position:relative;margin-top:18px;margin-bottom:18px;padding-top:42px;padding-bottom:42px;border-radius:28px;isolation:isolate}
 .section-tint::before{content:"";position:absolute;inset:0 calc((100vw - 100%)/-2);z-index:-1;border-top:1px solid rgba(255,255,255,.025);border-bottom:1px solid rgba(255,255,255,.025);pointer-events:none}
-#dashboard.section-tint::before{background:rgba(92,119,150,.075)}
-#regions.section-tint::before{background:rgba(80,139,169,.075)}
-#itinerary.section-tint::before{background:rgba(76,142,126,.07)}
-#todos.section-tint::before{background:rgba(157,135,101,.07)}
-#miniTrips.section-tint::before{background:rgba(123,104,159,.075)}
-#food.section-tint::before{background:rgba(177,119,74,.075)}
-#references.section-tint::before{background:rgba(82,128,172,.075)}
+#dashboard.section-tint::before{background:rgba(74,112,153,.18)}
+#regions.section-tint::before{background:rgba(54,125,158,.17)}
+#itinerary.section-tint::before{background:rgba(54,132,111,.16)}
+#todos.section-tint::before{background:rgba(145,111,69,.16)}
+#miniTrips.section-tint::before{background:rgba(113,85,157,.17)}
+#food.section-tint::before{background:rgba(164,94,49,.17)}
+#references.section-tint::before{background:rgba(59,111,164,.17)}
 [data-theme="light"] #dashboard.section-tint::before{background:#f1f5f8}
 [data-theme="light"] #regions.section-tint::before{background:#eef6f8}
 [data-theme="light"] #itinerary.section-tint::before{background:#eff7f3}
