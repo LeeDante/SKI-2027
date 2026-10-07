@@ -47,7 +47,7 @@ function renderDashboard(){
 
 function renderRegions(){
   $('#regionGrid').innerHTML=DATA.regions.map(r=>`
-    <article class="region-card">
+    <article class="region-card region-${r.no}">
       <div class="region-no">${r.no}</div>
       <h3>${r.name}</h3>
       <div class="date-line">${r.dates} · ${r.nights}</div>
@@ -88,7 +88,7 @@ function renderTodos(filter='全部'){
   if(filter==='高') arr=arr.filter(x=>x.priority==='高');
   if(filter==='待外部回覆') arr=arr.filter(x=>x.status==='待外部回覆');
   $('#todoGrid').innerHTML=arr.map(x=>`
-    <article class="todo-card">
+    <article class="todo-card priority-${x.priority==='高'?'high':x.priority==='中'?'medium':'low'}">
       <div class="todo-meta"><span class="tag">${x.category}</span><span class="tag ${x.priority==='高'?'priority-high':''}">${x.priority}優先</span></div>
       <h3>${x.text}</h3><p>${x.status}</p>
     </article>`).join('');
