@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-07 10:45",
+    "lastUpdated": "2026-10-07 10:48",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -418,6 +418,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026-10-07 10:48",
+      "text": "仙台迷你單日行程補入「藏王狐狸村＋松島」與「狐狸村半日包車」；維持排除銀山與藏王樹冰重複組合。"
+    },
+    {
       "date": "2026-10-07 10:45",
       "text": "重新核對迷你單日行程日期狀態：區分「2027 已有排程」「2027 待確認席位」「2027 待開放」，移除誤導性的全面「尚無日期可選」標示，並修正冬季最上川＋羽黑山商品。"
     },
@@ -481,6 +485,26 @@
     }
   ],
   "miniDayTrips": [
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "藏王狐狸村＋日本三景松島",
+      "from": "仙台站出發",
+      "duration": "一日",
+      "fit": "狐狸村＋松島一次完成；不含銀山與藏王樹冰，適合仙台住宿期間安排。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.kkday.com/zh-tw/category/jp-miyagi-zao-fox-village/day-tours/list"
+    },
+    {
+      "region": "仙台",
+      "platform": "KKday",
+      "title": "藏王狐狸村半日包車",
+      "from": "仙台站出發",
+      "duration": "半日",
+      "fit": "以狐狸村為主的短版方案，時間較彈性，可搭配仙台市區或採買。",
+      "dateStatus": "2027 待開放",
+      "url": "https://www.kkday.com/zh-tw/destination/jp-miyagi-zao-fox-village"
+    },
     {
       "region": "仙台",
       "platform": "Klook",
