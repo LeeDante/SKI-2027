@@ -64,16 +64,12 @@ function renderRegions(){
 function itineraryTags(x){
   const text=[x.title,x.summary,...(x.details||[])].join('｜');
   const rules=[
-    ['上午',/早上|上午|早餐|09:|10:|11:|樹冰/],
-    ['午餐',/午餐|中午|12:|13:00/],
-    ['下午',/下午|14:|15:|16:|採草莓|水族館/],
-    ['晚餐',/晚餐|晚間|晚上/],
-    ['交通',/→|JR|接駁|巴士|新幹線|移動|回程|前往|交通|機場|遊船/],
-    ['住宿',/入住|飯店|住宿|換房|退房|四季|瀧之湯/],
-    ['滑雪',/滑雪|教練|雪具|綠線/],
-    ['景點',/松島|鹽竈|狐狸村|山寺|銀山|Twilight|自由行|市區|採買/]
+    ['上午',/早上|上午|早餐|08:|09:|10:|11:|樹冰|出發/],
+    ['午餐',/午餐|中午|12:|13:00|海鮮|牡蠣/],
+    ['下午',/下午|13:|14:|15:|16:|採草莓|水族館|自由活動/],
+    ['晚餐',/晚餐|晚間|晚上|牛舌/]
   ];
-  return rules.filter(([,re])=>re.test(text)).map(([label])=>label);
+  return rules.map(([label,re])=>({label,filled:re.test(text)}));
 }
 
 function renderItinerary(){
@@ -83,9 +79,9 @@ function renderItinerary(){
     <button class="itinerary-item region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
       <div class="itinerary-mainline">
         <span class="itinerary-date">${x.date}</span><span class="itinerary-day">${x.day}</span>
-        <strong class="itinerary-one-line">${x.title}｜${x.summary}</strong>
+        <strong class="itinerary-one-line">${x.title}</strong>
       </div>
-      <div class="itinerary-tags">${tags.map(t=>'<span class="itinerary-tag">'+t+'</span>').join('')}</div>
+      <div class="itinerary-tags">${tags.map(t=>'<span class="itinerary-tag '+(t.filled?'filled':'missing')+'">'+t.label+'</span>').join('')}</div>
     </button>`;
   }).join('');
   $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{
