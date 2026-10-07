@@ -84,20 +84,26 @@ function renderItineraryDetail(i){
     <ul class="detail-list">${x.details.map(v=>'<li>'+v+'</li>').join('')}</ul>`;
 }
 
-function renderTodos(filter='全部'){
-  let arr=DATA.todos;
-  if(filter==='高') arr=arr.filter(x=>x.priority==='高');
-  if(filter==='待外部回覆') arr=arr.filter(x=>x.status==='待外部回覆');
-  $('#todoGrid').innerHTML=arr.map(x=>`
-    <article class="todo-card priority-${x.priority==='高'?'high':x.priority==='中'?'medium':'low'}">
-      <div class="todo-meta"><span class="tag">${x.category}</span><span class="tag ${x.priority==='高'?'priority-high':''}">${x.priority}優先</span></div>
-      <h3>${x.text}</h3><p>${x.status}</p>
-    </article>`).join('');
+function renderTodos(){
+  const columns=[
+    {priority:'高',title:'最重要',note:'現在優先處理',cls:'high'},
+    {priority:'中',title:'次重要',note:'接著處理',cls:'medium'},
+    {priority:'低',title:'最低',note:'可以稍後',cls:'low'}
+  ];
+  $('#todoGrid').innerHTML=columns.map(col=>{
+    const arr=DATA.todos.filter(x=>x.priority===col.priority);
+    return `<section class="todo-column priority-${col.cls}">
+      <div class="todo-column-head"><div><span>${col.priority}優先</span><h3>${col.title}</h3></div><b>${arr.length}</b></div>
+      <div class="todo-column-note">${col.note}</div>
+      <div class="todo-column-list">${arr.length?arr.map(x=>`
+        <article class="todo-compact-card">
+          <div class="todo-compact-top"><span class="tag">${x.category}</span><small>${x.status}</small></div>
+          <h4>${x.title||x.text}</h4>
+          <p>${x.summary||''}</p>
+        </article>`).join(''):'<div class="todo-empty">目前沒有項目</div>'}</div>
+    </section>`;
+  }).join('');
 }
-$$('.filter').forEach(btn=>btn.addEventListener('click',()=>{
-  $$('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderTodos(btn.dataset.filter);
-}));
-
 
 function renderMiniTrips(){
   const root=$('#miniTripGroups'); if(!root || !DATA.miniDayTrips) return;
