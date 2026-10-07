@@ -93,3 +93,6 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 .todo-compact-card{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--panel);box-shadow:none}.todo-column.priority-high .todo-compact-card{border-left:3px solid #ff7474}.todo-column.priority-medium .todo-compact-card{border-left:3px solid #f0bd58}.todo-column.priority-low .todo-compact-card{border-left:3px solid #6d8eaf}
 .todo-compact-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.todo-compact-top .tag{font-size:10px;padding:4px 7px}.todo-compact-top small{font-size:10px;color:var(--muted);white-space:nowrap}.todo-compact-card h4{font-size:15px;line-height:1.35;margin:9px 0 4px}.todo-compact-card p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}.todo-empty{font-size:12px;color:var(--muted);border:1px dashed var(--line);border-radius:12px;padding:18px;text-align:center}
 @media(max-width:820px){#todos .todo-grid{grid-template-columns:1fr}.todo-column{min-height:auto}}
+
+.mini-trip-price{display:grid;gap:2px;margin:10px 0;padding:9px 10px;border-radius:12px;background:var(--panel2);border:1px solid var(--line)}
+.mini-trip-price span{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.04em}.mini-trip-price strong{font-size:18px;line-height:1.2}.mini-trip-price small{font-size:10px;line-height:1.4;color:var(--muted)}
