@@ -125,7 +125,7 @@ box-shadow:0 24px 70px rgba(0,0,0,.28)}
 @media(max-width:700px){.section-tint{margin-top:10px;margin-bottom:10px;padding-top:32px;padding-bottom:32px;border-radius:0}}
 
 /* Four-region identity colors */
-:root{--sendai:#4fa7c7;--zao:#77aee8;--yamagata:#d99a5b;--tokyo:#b779a5}
+:root{--sendai:#45b5a6;--zao:#77aee8;--yamagata:#d99a5b;--tokyo:#b779a5}
 .itinerary-item{position:relative;overflow:hidden}
 .itinerary-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--region-color)}
 .itinerary-item.region-sendai{--region-color:var(--sendai);background:color-mix(in srgb,var(--sendai) 8%,var(--panel))}
