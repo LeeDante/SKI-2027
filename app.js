@@ -12,6 +12,7 @@ async function load(){
   renderItinerary();
   renderTodos();
   renderMiniTrips();
+  renderFoodGuide();
   renderReferences();
   renderFooterBlocks();
   initTheme();
@@ -123,6 +124,31 @@ function renderMiniTrips(){
         </article>`).join('')}</div>
     </div>`;
   }).join('');
+}
+
+
+function renderFoodGuide(){
+  const root=$('#foodGroups'); if(!root || !DATA.foodGuide) return;
+  const labels={lunch:'午餐',dinner:'晚餐',snack:'小吃'};
+  $('#foodRules').innerHTML=(DATA.foodGuideRules||[]).map(x=>'<span class="food-rule">'+x+'</span>').join('');
+  root.innerHTML=DATA.foodGuide.map(area=>`
+    <section class="food-region">
+      <div class="food-region-head"><h3>${area.region}</h3></div>
+      <div class="food-meal-grid">${Object.entries(labels).map(([key,label])=>{
+        const items=area.meals[key]||[];
+        return `<div class="food-meal-column"><div class="food-meal-head"><strong>${label}</strong><span>${items.length}</span></div>
+          <div class="food-card-list">${items.length?items.map(x=>`
+            <article class="food-card">
+              <div class="food-card-top"><span>${x.category||label}</span><small>${x.price||'價格待補'}</small></div>
+              <h4>${x.name}</h4><p>${x.note||''}</p>
+              <div class="food-tags">
+                <span>預約：${x.reservation||'待確認'}</span><span>菜單：${x.menu||'待確認'}</span><span>親子：${x.family||'待確認'}</span>
+              </div>
+              ${x.url?'<a class="source-link" href="'+x.url+'" target="_blank" rel="noopener">查看餐廳 ↗</a>':''}
+            </article>`).join(''):'<div class="food-empty">候選餐廳待加入</div>'}</div>
+        </div>`;
+      }).join('')}</div>
+    </section>`).join('');
 }
 
 function renderReferences(){
