@@ -294,3 +294,13 @@ img,svg{max-width:100%}
 .overview-image-links a:hover{outline:2px solid rgba(255,255,255,.65);outline-offset:-2px;background:rgba(255,255,255,.05)!important}
 .overview-image-links a:focus-visible{outline:3px solid #fff;outline-offset:-3px;background:rgba(255,255,255,.1)!important}
 @media(max-width:600px){.overview-image-links{left:68%;right:2%;top:6%;bottom:6%;width:auto;gap:1%}.overview-image-links a{padding:0;border-radius:4px}}
+
+/* Mini day trips: compact collapsed list */
+.mini-trip-grid{display:grid;grid-template-columns:1fr!important;gap:8px!important}
+.mini-trip-card{padding:0!important;min-height:0!important;overflow:hidden}
+.mini-trip-card>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:12px 15px;font-size:14px}
+.mini-trip-card>summary::-webkit-details-marker{display:none}
+.mini-trip-card>summary strong{font-size:14px;line-height:1.45}
+.mini-trip-card>summary span{font-size:19px;opacity:.7;transition:transform .2s}
+.mini-trip-card[open]>summary span{transform:rotate(180deg)}
+.mini-trip-expanded{padding:0 15px 15px}
