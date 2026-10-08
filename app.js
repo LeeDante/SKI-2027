@@ -10,6 +10,7 @@ async function load(){
   DATA = await fetch('data.json?v=' + Date.now()).then(r=>r.json());
   renderMeta();
   renderDashboard();
+  renderCategoryBudget();
   renderRegions();
   renderItinerary();
   initRegionJumps();
@@ -52,6 +53,25 @@ function renderDashboard(){
   $('#budgetPercent').textContent=Math.round(b.regionSpentTotalTwd/b.limitTwd*100)+'%（已付／全程預算）';
   $('#budgetBar i').style.width=Math.min(100,Math.round(b.regionSpentTotalTwd/b.limitTwd*100))+'%';
   $('#regionalBudget').innerHTML='<div class="regional-budget-head"><h3>四區預花費與已花費</h3><p>預花費待設定；已花費依訂位文件的付款記錄，非銀行對帳結果</p></div><div class="regional-budget-grid">'+b.regionBreakdown.map((r,i)=>'<article class="regional-budget-card"><div class="regional-budget-title"><strong>'+String(i+1).padStart(2,'0')+' '+r.name+'</strong><a href="#itinerary" data-region-jump="'+r.name+'">看行程 ↗</a></div><div class="regional-budget-values"><div><span>預花費</span><b>'+(money(r.plannedTwd))+'</b></div><div><span>已花費</span><b>'+money(r.spentTwd)+'</b></div></div><p>'+r.note+'</p></article>').join('')+'</div><div class="regional-budget-total"><span>四區已花費合計</span><strong>'+money(b.regionSpentTotalTwd)+'</strong><small>不含尚未分攤的機票、跨區交通及待估費用</small></div>';
+}
+
+function renderCategoryBudget(){
+ const b=DATA.budget, names={'住宿':'住宿','交通':'交通','餐飲':'餐飲','滑雪':'滑雪相關','活動':'活動／門票','機票':'國際機票'};
+ const groups=Object.keys(names).map(k=>{
+   const items=b.items.filter(x=>x.category===k);
+   const paid=items.filter(x=>x.status==='confirmed').reduce((n,x)=>n+x.twd,0);
+   const total=items.reduce((n,x)=>n+x.twd,0);
+   return {name:names[k],paid,total};
+ });
+ const paid=groups.reduce((n,x)=>n+x.paid,0),total=groups.reduce((n,x)=>n+x.total,0);
+ $('#categoryBudget').innerHTML='<div class="regional-budget-head"><h3>總預算｜依費用類別</h3><p>已確認／總預期花費（含未確認暫估）</p></div><div class="category-budget-grid">'+groups.map(x=>'<div class="category-budget-item"><strong>'+x.name+'</strong><span>'+money(x.paid)+' / '+money(x.total)+'</span><div class="bar money"><i style="width:'+(x.total?Math.min(100,x.paid/x.total*100):0)+'%"></i></div></div>').join('')+'</div><div class="regional-budget-total"><span>整趟已確認／總預算</span><strong>'+money(paid)+' / '+money(total)+'</strong><small>未確認暫估 '+money(total-paid)+'；未列購物費</small></div>';
+ $('#knownPaid').textContent=money(paid);
+ $('#budgetLimit').textContent=money(total);
+ $('#listedSubtotal').textContent=money(b.regionPlanTotalTwd);
+ $('#knownUnpaid').textContent=money(total-paid);
+ $('#paymentUnknown').textContent=money(b.sharedEstimateTwd);
+ $('#budgetPercent').textContent=(total?Math.round(paid/total*100):0)+'% 已確認';
+ $('#budgetBar i').style.width=(total?Math.min(100,paid/total*100):0)+'%';
 }
 
 function renderRegions(){
