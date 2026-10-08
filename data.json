@@ -44,7 +44,39 @@
     "paymentUnknownTwd": 47952,
     "missingAmountItems": 7,
     "paymentCheckItems": 4,
-    "note": "目前為部分費用小計；仙台住宿已納入 NT$40,445（預結算／尚未列為已付）。尚未包含所有待補金額；付款狀態未知的費用另列，不直接視為已付或未付。"
+    "note": "四區已花費依訂位文件所載信用卡付款狀態彙總，尚未核對實際銀行入帳；四區預花費目標待設定。機票與跨區交通尚未分攤，不計入四區合計；原整趟預算小計另留存供核對。",
+    "regionBreakdown": [
+      {
+        "name": "仙台",
+        "plannedTwd": null,
+        "spentTwd": 40445,
+        "committedTwd": 40445,
+        "note": "住宿 NT$40,445；採買、交通與餐費待估"
+      },
+      {
+        "name": "藏王",
+        "plannedTwd": null,
+        "spentTwd": 148975,
+        "committedTwd": 148975,
+        "note": "四季五晚 ¥677,160；教練、租具、纜車與午餐待估"
+      },
+      {
+        "name": "山形／天童",
+        "plannedTwd": null,
+        "spentTwd": 53100,
+        "committedTwd": 53100,
+        "note": "滝の湯 ¥217,962＋銀山團 ¥23,400；其他活動交通待估"
+      },
+      {
+        "name": "東京",
+        "plannedTwd": null,
+        "spentTwd": 0,
+        "committedTwd": 0,
+        "note": "飯店未訂；住宿、餐食與市內交通待估"
+      }
+    ],
+    "regionSpentTotalTwd": 242520,
+    "regionPlanTotalTwd": null
   },
   "regions": [
     {
@@ -557,6 +589,10 @@
     }
   ],
   "recentChanges": [
+    {
+      "date": "2026-10-08",
+      "text": "儀表板新增四區預花費／已花費，已付以訂房憑證計算；路線圖片移至進度預算最上方，旁設四區行程跳轉。"
+    },
     {
       "date": "2026-10-07 22:27",
       "text": "仙台住宿正式完成：Daiwa Roynet Hotel 仙台西口 PREMIER，1/21–1/26 共5晚；44㎡禁菸小型套房、154×203cm大床×2、純住宿 NT$40,445，1/19 23:59前免費取消。同步完成仙台住宿待辦、更新住宿進度與預算，並補齊1/31銀山 Night Tour 15:15集合與預約資訊。"
