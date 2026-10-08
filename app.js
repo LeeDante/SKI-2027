@@ -88,6 +88,8 @@ function renderRegions(){
 
 const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐'],['evening','晚上']];
 function isConfirmedSlot(day,key){
+ const plannedTourDays=['01/23','01/25'];
+ if(plannedTourDays.includes(day.date)&&(key==='morning'||key==='afternoon'))return true;
  const v=String(day.schedule?.[key]||'').trim();
  if(!v||/自理|待定|待確認|候選|參考|彈性|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
  if(key==='breakfast'||key==='dinner')return /含早餐|含晚餐/.test(v)&&!/衝突/.test(v);
