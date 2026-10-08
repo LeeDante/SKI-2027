@@ -44,39 +44,187 @@
     "paymentUnknownTwd": 47952,
     "missingAmountItems": 7,
     "paymentCheckItems": 4,
-    "note": "四區已花費依訂位文件所載信用卡付款狀態彙總，尚未核對實際銀行入帳；四區預花費目標待設定。機票與跨區交通尚未分攤，不計入四區合計；原整趟預算小計另留存供核對。",
+    "note": "預算＝已確認金額＋未確認暫估；以三人同行估算。含餐飯店不重複計早餐晚餐；跨區交通按目的地分攤。機票列共通預估，未查核實際付款。暫估不是報價，未含購物金額；幣別 NT$，日圓暫按 0.22 換算。",
     "regionBreakdown": [
       {
         "name": "仙台",
-        "plannedTwd": null,
+        "plannedTwd": 88445,
         "spentTwd": 40445,
         "committedTwd": 40445,
-        "note": "住宿 NT$40,445；採買、交通與餐費待估"
+        "note": "已確認 40,445＋暫估 48,000；細項可隨報價更新",
+        "estimatedTwd": 48000
       },
       {
         "name": "藏王",
-        "plannedTwd": null,
+        "plannedTwd": 216475,
         "spentTwd": 148975,
         "committedTwd": 148975,
-        "note": "四季五晚 ¥677,160；教練、租具、纜車與午餐待估"
+        "note": "已確認 148,975＋暫估 67,500；細項可隨報價更新",
+        "estimatedTwd": 67500
       },
       {
         "name": "山形／天童",
-        "plannedTwd": null,
+        "plannedTwd": 68100,
         "spentTwd": 53100,
         "committedTwd": 53100,
-        "note": "滝の湯 ¥217,962＋銀山團 ¥23,400；其他活動交通待估"
+        "note": "已確認 53,100＋暫估 15,000；細項可隨報價更新",
+        "estimatedTwd": 15000
       },
       {
         "name": "東京",
-        "plannedTwd": null,
+        "plannedTwd": 81000,
         "spentTwd": 0,
         "committedTwd": 0,
-        "note": "飯店未訂；住宿、餐食與市內交通待估"
+        "note": "已確認 0＋暫估 81,000；細項可隨報價更新",
+        "estimatedTwd": 81000
       }
     ],
     "regionSpentTotalTwd": 242520,
-    "regionPlanTotalTwd": null
+    "regionPlanTotalTwd": 454020,
+    "items": [
+      {
+        "region": "仙台",
+        "category": "住宿",
+        "name": "仙台西口 PREMIER 五晚",
+        "twd": 40445,
+        "status": "confirmed"
+      },
+      {
+        "region": "仙台",
+        "category": "餐飲",
+        "name": "5 天三餐（2大1小，飯店不含餐）",
+        "twd": 27000,
+        "status": "estimated"
+      },
+      {
+        "region": "仙台",
+        "category": "交通",
+        "name": "市區交通、松島往返、機場進城",
+        "twd": 9000,
+        "status": "estimated"
+      },
+      {
+        "region": "仙台",
+        "category": "活動",
+        "name": "松島遊船、水族館、狐狸村／草莓等候選",
+        "twd": 12000,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "住宿",
+        "name": "四季五晚含早晚餐（¥677,160）",
+        "twd": 148975,
+        "status": "confirmed"
+      },
+      {
+        "region": "藏王",
+        "category": "餐飲",
+        "name": "雪場午餐五日及飲料零食",
+        "twd": 9000,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "交通",
+        "name": "仙台→山形與山形站接駁／市內交通",
+        "twd": 3500,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "滑雪",
+        "name": "中文教練兩個半天",
+        "twd": 20000,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "滑雪",
+        "name": "三人雪具／雪衣／安全帽租借",
+        "twd": 20000,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "滑雪",
+        "name": "三人纜車票約四日",
+        "twd": 15000,
+        "status": "estimated"
+      },
+      {
+        "region": "山形／天童",
+        "category": "住宿",
+        "name": "滝の湯三晚含早晚餐（¥217,962）",
+        "twd": 47952,
+        "status": "confirmed"
+      },
+      {
+        "region": "山形／天童",
+        "category": "活動",
+        "name": "銀山 Night Tour 三人（¥23,400）",
+        "twd": 5148,
+        "status": "confirmed"
+      },
+      {
+        "region": "山形／天童",
+        "category": "餐飲",
+        "name": "三日午餐、飲料零食",
+        "twd": 6000,
+        "status": "estimated"
+      },
+      {
+        "region": "山形／天童",
+        "category": "交通",
+        "name": "山形→天童、山寺及周邊移動",
+        "twd": 4500,
+        "status": "estimated"
+      },
+      {
+        "region": "山形／天童",
+        "category": "活動",
+        "name": "山寺及其他冬季體驗",
+        "twd": 4500,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "住宿",
+        "name": "東京飯店三晚（尚未訂）",
+        "twd": 33000,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "餐飲",
+        "name": "三天半三人餐飲（飯店未確認含餐）",
+        "twd": 22000,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "交通",
+        "name": "天童→東京新幹線、東京市內、成田交通",
+        "twd": 19000,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "活動",
+        "name": "門票／觀光活動預留",
+        "twd": 7000,
+        "status": "estimated"
+      },
+      {
+        "region": "共通",
+        "category": "機票",
+        "name": "桃園→仙台、成田→台中，三人機票暫估",
+        "twd": 55000,
+        "status": "estimated"
+      }
+    ],
+    "sharedEstimateTwd": 55000,
+    "tripProjectedTwd": 509020
   },
   "regions": [
     {
