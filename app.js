@@ -61,51 +61,16 @@ function renderRegions(){
     </article>`).join('');
 }
 
-function itineraryTags(x){
-  const text=[x.title,x.summary,...(x.details||[])].join('｜');
-  const rules=[
-    ['上午',/早上|上午|早餐|08:|09:|10:|11:|樹冰|出發/],
-    ['午餐',/午餐|中午|12:|13:00|海鮮|牡蠣/],
-    ['下午',/下午|13:|14:|15:|16:|採草莓|水族館|自由活動/],
-    ['晚餐',/晚餐|晚間|晚上|牛舌/]
-  ];
-  return rules.map(([label,re])=>({label,filled:re.test(text)}));
-}
-
+const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐'],['evening','晚上']];
 function renderItinerary(){
-  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>{
-    const tags=itineraryTags(x);
-    const tagHtml=tags.map(t=>'<span class="schedule-slot '+(t.filled?'is-filled':'is-empty')+'">'+t.label+'</span>').join('');
-    return `
-    <button class="itinerary-item itinerary-row region-${regionClass(x.region)} ${i===0?'active':''}" data-i="${i}">
-      <div class="itinerary-row-top">
-        <span class="itinerary-date">${x.date}</span>
-        <span class="itinerary-day">${x.day}</span>
-        <strong class="itinerary-one-line">${x.title}</strong>
-      </div>
-      <div class="itinerary-row-slots">${tagHtml}</div>
-    </button>`;
-  }).join('');
-  $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{
-    $$('.itinerary-item').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    renderItineraryDetail(Number(b.dataset.i));
-  }));
-  renderItineraryDetail(0);
+ $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+slotNames.map(([k,label])=>'<span class="schedule-slot '+(x.schedule&&x.schedule[k]?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
+ $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{$$('.itinerary-item').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderItineraryDetail(Number(b.dataset.i));}));
+ renderItineraryDetail(0);
 }
-
 function renderItineraryDetail(i){
-  const x=DATA.itinerary[i];
-  const detail=$('#itineraryDetail');
-  detail.className='panel itinerary-detail region-'+regionClass(x.region);
-  detail.innerHTML=`
-    <div class="detail-top">
-      <div><div class="detail-region">${x.region}</div><div class="detail-date">${x.date}</div></div>
-      <span class="status detail-status">${x.status}</span>
-    </div>
-    <h3 class="detail-title">${x.title}</h3>
-    <p class="detail-summary">${x.summary}</p>
-    <ul class="detail-list">${x.details.map(v=>'<li>'+v+'</li>').join('')}</ul>`;
+ const x=DATA.itinerary[i],s=x.schedule||{},detail=$('#itineraryDetail');
+ detail.className='panel itinerary-detail region-'+regionClass(x.region);
+ detail.innerHTML='<div class="detail-top"><div><div class="detail-region">'+x.region+'</div><div class="detail-date">'+x.date+'</div></div><span class="status detail-status">'+x.status+'</span></div><h3 class="detail-title">'+x.title+'</h3><p class="detail-summary">'+x.summary+'</p><div class="day-schedule">'+slotNames.map(([k,label])=>'<div class="day-schedule-row"><strong>'+label+'</strong><span>'+(s[k]||'待安排')+'</span></div>').join('')+'</div><details><summary>交通與備案詳細備註</summary><ul class="detail-list">'+x.details.map(v=>'<li>'+v+'</li>').join('')+'</ul></details>';
 }
 
 function renderTodos(){
