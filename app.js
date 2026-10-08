@@ -12,6 +12,7 @@ async function load(){
   renderDashboard();
   renderRegions();
   renderItinerary();
+  initRegionJumps();
   renderTodos();
   renderMiniTrips();
   renderFoodGuide();
@@ -46,7 +47,11 @@ function renderDashboard(){
   $('#knownUnpaid').textContent=money(b.knownUnpaidReserveTwd);
   $('#paymentUnknown').textContent=money(b.paymentUnknownTwd);
   $('#budgetBar i').style.width=Math.min(bp,100)+'%';
-  $('#budgetNote').textContent=b.note+'｜'+DATA.meta.exchangeRate+'｜待補金額 '+b.missingAmountItems+' 項；付款待核對 '+b.paymentCheckItems+' 項。';
+  $('#budgetNote').textContent=b.note+'｜'+DATA.meta.exchangeRate;
+  $('#knownPaid').textContent=money(b.regionSpentTotalTwd);
+  $('#budgetPercent').textContent=Math.round(b.regionSpentTotalTwd/b.limitTwd*100)+'%（已付／全程預算）';
+  $('#budgetBar i').style.width=Math.min(100,Math.round(b.regionSpentTotalTwd/b.limitTwd*100))+'%';
+  $('#regionalBudget').innerHTML='<div class="regional-budget-head"><h3>四區預花費與已花費</h3><p>預花費待設定；已花費依訂位文件的付款記錄，非銀行對帳結果</p></div><div class="regional-budget-grid">'+b.regionBreakdown.map((r,i)=>'<article class="regional-budget-card"><div class="regional-budget-title"><strong>'+String(i+1).padStart(2,'0')+' '+r.name+'</strong><a href="#itinerary" data-region-jump="'+r.name+'">看行程 ↗</a></div><div class="regional-budget-values"><div><span>預花費</span><b>'+(r.plannedTwd===null?'待設定':money(r.plannedTwd))+'</b></div><div><span>已花費</span><b>'+money(r.spentTwd)+'</b></div></div><p>'+r.note+'</p></article>').join('')+'</div><div class="regional-budget-total"><span>四區已花費合計</span><strong>'+money(b.regionSpentTotalTwd)+'</strong><small>不含尚未分攤的機票、跨區交通及待估費用</small></div>';
 }
 
 function renderRegions(){
@@ -71,6 +76,18 @@ function renderItineraryDetail(i){
  const x=DATA.itinerary[i],s=x.schedule||{},detail=$('#itineraryDetail');
  detail.className='panel itinerary-detail region-'+regionClass(x.region);
  detail.innerHTML='<div class="detail-top"><div><div class="detail-region">'+x.region+'</div><div class="detail-date">'+x.date+'</div></div><span class="status detail-status">'+x.status+'</span></div><h3 class="detail-title">'+x.title+'</h3><p class="detail-summary">'+x.summary+'</p><div class="day-schedule">'+slotNames.map(([k,label])=>'<div class="day-schedule-row"><strong>'+label+'</strong><span>'+(s[k]||'待安排')+'</span></div>').join('')+'</div><details><summary>交通與備案詳細備註</summary><ul class="detail-list">'+x.details.map(v=>'<li>'+v+'</li>').join('')+'</ul></details>';
+}
+
+function initRegionJumps(){
+  $$('[data-region-jump]').forEach(link=>link.addEventListener('click',()=>{
+    const region=link.dataset.regionJump;
+    const index=DATA.itinerary.findIndex(x=>region==='山形／天童'?(x.region.includes('山形')||x.region.includes('天童')):x.region===region);
+    if(index<0)return;
+    $$('.itinerary-item').forEach(x=>x.classList.remove('active'));
+    const item=$('.itinerary-item[data-i="'+index+'"]');
+    if(item){item.classList.add('active');item.scrollIntoView({block:'nearest'});}
+    renderItineraryDetail(index);
+  }));
 }
 
 function renderTodos(){
