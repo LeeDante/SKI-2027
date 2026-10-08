@@ -924,6 +924,13 @@
       "title": "決定台灣室內課程",
       "summary": "比較短期課程，決定出國前是否先上 4 堂。",
       "status": "比較中"
+    },
+    {
+      "category": "交通",
+      "priority": "低",
+      "title": "整理跨區交通購票與轉乘",
+      "summary": "依行程核對仙台→藏王、藏王→天童、天童→東京及成田機場的 JR／巴士票價、購票時間與轉乘方式。",
+      "status": "待整理"
     }
   ],
   "skiReferences": [
@@ -1235,58 +1242,6 @@
       "priceLabel": "價格待平台日期開放",
       "familyPrice": "待估",
       "priceNote": "KKday商品頁仍存在並提供多時段；2027/2月需進日曆實選後才算可訂。"
-    },
-    {
-      "region": "東京",
-      "platform": "Klook",
-      "title": "富士山＆河口湖客製化一日遊",
-      "from": "東京／新宿／飯店接送",
-      "duration": "08:00–17:00",
-      "fit": "商品規則已明列 2027 年特殊日期，確認營運規劃已跨入 2027；2/4、2/5 的即時席位仍需以日曆為準。",
-      "dateStatus": "商品存在｜2027日期需實選",
-      "url": "https://www.klook.com/zh-TW/activity/197909-tokyo-mount-fuji-full-day-private-charter-tour/",
-      "priceLabel": "價格待平台日期開放",
-      "familyPrice": "待估",
-      "priceNote": "Klook商品頁仍存在；不再因頁面提到2027就標示為『已有排程』，2/4或2/5需日曆實選確認。"
-    },
-    {
-      "region": "東京",
-      "platform": "KKday",
-      "title": "富士山私人包車／9人精品小團",
-      "from": "東京市區飯店",
-      "duration": "10小時",
-      "fit": "中文司機；商品注意事項已列到 2027 年，適合 2大1小且可調整停留時間。",
-      "dateStatus": "商品存在｜2027日期需實選",
-      "url": "https://www.kkday.com/zh-tw/product/594342",
-      "priceLabel": "價格待平台日期開放",
-      "familyPrice": "待估",
-      "priceNote": "KKday商品頁仍存在且可選方案；2/4或2/5需日曆實選確認。"
-    },
-    {
-      "region": "東京",
-      "platform": "KKday",
-      "title": "富士山＋箱根一日遊｜大涌谷＋忍野八海＋山中湖",
-      "from": "東京出發",
-      "duration": "10小時",
-      "fit": "中文／英文；商品已列 2027 年營運注意日期，富士山與箱根一次完成。",
-      "dateStatus": "商品存在｜2027營運資訊可見",
-      "url": "https://www.kkday.com/zh-tw/product/150923-mount-fuji-hakone-day-tour-lake-kawaguchi-tokyo",
-      "priceLabel": "NT$1,567 起／人",
-      "familyPrice": "約 NT$4,701 起",
-      "priceNote": "商品頁明列2027年部分日期的營運注意事項，代表產品規劃跨入2027；但2/4或2/5仍需日曆實選確認。"
-    },
-    {
-      "region": "東京",
-      "platform": "KKday",
-      "title": "日光｜東照宮＋華嚴瀑布＋中禪寺湖",
-      "from": "東京出發",
-      "duration": "約10小時",
-      "fit": "中文／英文／日文；商品正常販售，2/4、2/5 是否有團仍以平台日曆為準。",
-      "dateStatus": "商品存在｜2027日期需實選",
-      "url": "https://www.kkday.com/zh-tw/product/150528-autumn-tokyo-nikko-tour-toshogu-shrine-nikko-city-street-iroha-mountain-trail-kegon-falls-lake-chuzenji",
-      "priceLabel": "NT$1,709 起／人",
-      "familyPrice": "約 NT$5,424 起",
-      "priceNote": "KKday商品頁與日光分類頁目前均存在；2/4或2/5是否可訂仍需日曆實選。"
     }
   ],
   "foodGuide": [
