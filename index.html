@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b1220">
   <meta name="description" content="SKI-2027 日本東北冬旅計畫">
   <title>SKI-2027 日本東北冬旅</title>
-  <link rel="stylesheet" href="styles.css?v=202610071817">
+  <link rel="stylesheet" href="styles.css?v=202610081100">
 </head>
 <body>
 <header class="topbar">
@@ -39,22 +39,17 @@
 
   <section id="dashboard" class="section shell section-tint home-overview">
     <div class="section-head"><div><div class="eyebrow">TRIP OVERVIEW</div><h2>旅行準備，一眼掌握</h2></div><div class="section-note">仙台 → 藏王 → 山形／天童 → 東京</div></div>
+    <div class="overview-route"><figure class="overview-route-photo"><img src="5473B651-51C7-44A4-A8E5-314756AA111D.png?v=202610071602" alt="SKI-2027 17天日本東北冬旅移動軌跡：仙台、藏王、山形天童、東京與成田"></figure><div class="overview-region-links"><div class="panel-title">四區行程快速前往</div><a href="#itinerary" data-region-jump="仙台">01 仙台 <span>1/21–1/26 ↗</span></a><a href="#itinerary" data-region-jump="藏王">02 藏王 <span>1/26–1/31 ↗</span></a><a href="#itinerary" data-region-jump="山形／天童">03 山形／天童 <span>1/31–2/03 ↗</span></a><a href="#itinerary" data-region-jump="東京">04 東京 <span>2/03–2/06 ↗</span></a></div></div>
     <div class="dashboard-grid">
       <article class="panel progress-panel"><div class="panel-title">準備進度</div><div class="progress-main"><strong id="progressDone">0</strong><span>/</span><span id="progressTotal">0</span></div><div id="progressBar" class="bar"><i></i></div><div id="categoryProgress" class="mini-grid"></div></article>
-      <article class="panel budget-panel"><div class="panel-title-row"><div class="panel-title">旅行預算</div><span id="budgetPercent" class="pill"></span></div><div class="money-main"><span>已知已付</span><strong id="knownPaid"></strong></div><div id="budgetBar" class="bar money"><i></i></div><div class="budget-stats"><div><span>預算上限</span><strong id="budgetLimit"></strong></div><div><span>已列費用小計</span><strong id="listedSubtotal"></strong></div><div><span>已知尚未支付／預留</span><strong id="knownUnpaid"></strong></div><div><span>付款狀態待確認</span><strong id="paymentUnknown"></strong></div></div><p id="budgetNote" class="tiny muted"></p></article>
+      <article class="panel budget-panel"><div class="panel-title-row"><div class="panel-title">四區預算與支出</div><span id="budgetPercent" class="pill"></span></div><div class="money-main"><span>已知已付</span><strong id="knownPaid"></strong></div><div id="budgetBar" class="bar money"><i></i></div><div class="budget-stats"><div><span>預算上限</span><strong id="budgetLimit"></strong></div><div><span>已列費用小計</span><strong id="listedSubtotal"></strong></div><div><span>已知尚未支付／預留</span><strong id="knownUnpaid"></strong></div><div><span>付款狀態待確認</span><strong id="paymentUnknown"></strong></div></div><p id="budgetNote" class="tiny muted"></p></article>
+      <div id="regionalBudget" class="regional-budget"></div>
     </div>
   </section>
 
   <section id="regions" class="section shell section-tint home-regions">
     <div class="section-head"><div><div class="eyebrow">4 AREAS · 1 JOURNEY</div><h2>這趟旅程的四個章節</h2></div><div class="section-note">點開網站時，先看大方向，再往下看細節</div></div>
     <div id="regionGrid" class="region-grid"></div>
-  </section>
-
-  <section id="journeyTrack" class="section shell journey-track">
-    <div class="section-head"><div><div class="eyebrow">17 DAYS · JOURNEY TRACK</div><h2>東北雪旅移動軌跡</h2></div><div class="section-note">仙台 → 藏王 → 山形／天童 → 東京 → 成田</div></div>
-    <figure class="journey-track-image">
-      <img src="5473B651-51C7-44A4-A8E5-314756AA111D.png?v=202610071602" alt="SKI-2027 17天日本東北冬旅移動軌跡：仙台、藏王、山形天童、東京與成田">
-    </figure>
   </section>
 
   <section id="itinerary" class="section shell section-tint">
@@ -118,6 +113,6 @@
 </main>
 
 <footer><div class="shell">SKI-2027 · GitHub Pages · <span id="footerUpdated"></span></div></footer>
-<script src="app.js?v=202610071817"></script>
+<script src="app.js?v=202610081100"></script>
 </body>
 </html>
