@@ -87,8 +87,17 @@ function renderRegions(){
 }
 
 const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐'],['evening','晚上']];
+function isConfirmedSlot(day,key){
+ const v=String(day.schedule?.[key]||'').trim();
+ if(!v||/自理|待定|待確認|候選|參考|彈性|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
+ if(key==='breakfast'||key==='dinner')return /含早餐|含晚餐/.test(v)&&!/衝突/.test(v);
+ if(key==='lunch')return /已訂|已預約|已確認/.test(v);
+ if(/已訂|已預約|已確認|\d{1,2}:\d{2}.*(起飛|抵達)/.test(v))return true;
+ if(/入住|換房/.test(v)&&!/待/.test(v))return true;
+ return false;
+}
 function renderItinerary(){
- $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+slotNames.map(([k,label])=>'<span class="schedule-slot '+(x.schedule&&x.schedule[k]?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
+ $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+slotNames.map(([k,label])=>'<span class="schedule-slot '+(isConfirmedSlot(x,k)?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
  $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{$$('.itinerary-item').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderItineraryDetail(Number(b.dataset.i));}));
  renderItineraryDetail(0);
 }
