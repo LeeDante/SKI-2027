@@ -149,15 +149,17 @@ function renderMiniTrips(){
     const items=DATA.miniDayTrips.filter(x=>x.region===region).sort((a,b)=>(a.dateStatus==='尚無日期可選')-(b.dateStatus==='尚無日期可選'));
     return `<div class="mini-trip-region">
       <div class="mini-trip-region-head"><h3>${region}</h3><span>${items.length} 個候選</span></div>
-      <div class="mini-trip-grid">${items.map(x=>`
-        <article class="mini-trip-card ${x.dateStatus==='尚無日期可選'?'date-pending':''}">
-          <div class="mini-trip-top"><span class="platform ${x.platform.toLowerCase()}">${x.platform}</span><span class="date-state">${x.dateStatus}</span></div>
-          <h4>${x.title}</h4>
-          <div class="mini-trip-meta">${x.from} · ${x.duration}</div>
-          <div class="mini-trip-price"><span>2大1小參考</span><strong>${x.familyPrice||"待估"}</strong><small>${x.priceLabel||""}｜${x.priceNote||""}</small></div>
-          <p>${x.fit}</p>
-          <a class="source-link" href="${x.url}" target="_blank" rel="noopener">查看 ${x.platform} 行程 ↗</a>
-        </article>`).join('')}</div>
+      <div class="mini-trip-grid"> ${items.map(x=>`
+        <details class="mini-trip-card ${x.dateStatus==='尚無日期可選'?'date-pending':''}">
+          <summary><strong>${x.title}</strong><span aria-hidden="true">⌄</span></summary>
+          <div class="mini-trip-expanded">
+            <div class="mini-trip-top"><span class="platform ${x.platform.toLowerCase()}">${x.platform}</span><span class="date-state">${x.dateStatus}</span></div>
+            <div class="mini-trip-meta">${x.from} · ${x.duration}</div>
+            <div class="mini-trip-price"><span>2大1小參考</span><strong>${x.familyPrice||"待估"}</strong><small>${x.priceLabel||""}｜${x.priceNote||""}</small></div>
+            <p>${x.fit}</p>
+            <a class="source-link" href="${x.url}" target="_blank" rel="noopener">查看 ${x.platform} 行程 ↗</a>
+          </div>
+        </details>`).join('')}</div>
     </div>`;
   }).join('');
 }
