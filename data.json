@@ -44,7 +44,7 @@
     "paymentUnknownTwd": 47952,
     "missingAmountItems": 7,
     "paymentCheckItems": 4,
-    "note": "預算＝已確認金額＋未確認暫估；以三人同行估算。含餐飯店不重複計早餐晚餐；跨區交通按目的地分攤。機票列共通預估，未查核實際付款。暫估不是報價，未含購物金額；幣別 NT$，日圓暫按 0.22 換算。 跨區交通依抵達區域歸屬，接駁若未獲確認須重新估價；交通拆項不改變目前區域預算合計。",
+    "note": "預算＝已確認金額＋未確認暫估；以三人同行估算。含餐飯店不重複計早餐晚餐；跨區交通按目的地分攤。機票列共通預估，未查核實際付款。暫估不是報價，未含購物金額；幣別 NT$，日圓暫按 0.22 換算。 跨區交通依抵達區域歸屬，接駁若未獲確認須重新估價；交通拆項不改變目前區域預算合計。 餐飲另拆每日早餐／午餐／晚餐／零食；1/26早餐歸仙台、午餐歸藏王；1/31滝の湯晚餐衝突仍待確認。",
     "regionBreakdown": [
       {
         "name": "仙台",
@@ -266,7 +266,196 @@
       }
     ],
     "sharedEstimateTwd": 55000,
-    "tripProjectedTwd": 509020
+    "tripProjectedTwd": 509020,
+    "dailyMeals": [
+      {
+        "date": "01/21",
+        "region": "仙台",
+        "breakfastTwd": 0,
+        "lunchTwd": 1200,
+        "dinnerTwd": 2400,
+        "snacksTwd": 900,
+        "totalTwd": 4500,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "01/22",
+        "region": "仙台",
+        "breakfastTwd": 900,
+        "lunchTwd": 1800,
+        "dinnerTwd": 2400,
+        "snacksTwd": 300,
+        "totalTwd": 5400,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "01/23",
+        "region": "仙台",
+        "breakfastTwd": 900,
+        "lunchTwd": 1800,
+        "dinnerTwd": 2400,
+        "snacksTwd": 300,
+        "totalTwd": 5400,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "01/24",
+        "region": "仙台",
+        "breakfastTwd": 900,
+        "lunchTwd": 1800,
+        "dinnerTwd": 2400,
+        "snacksTwd": 300,
+        "totalTwd": 5400,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "01/25",
+        "region": "仙台",
+        "breakfastTwd": 900,
+        "lunchTwd": 1800,
+        "dinnerTwd": 2400,
+        "snacksTwd": 300,
+        "totalTwd": 5400,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "01/26",
+        "region": "藏王",
+        "breakfastTwd": 900,
+        "lunchTwd": 1800,
+        "dinnerTwd": 0,
+        "snacksTwd": 0,
+        "totalTwd": 2700,
+        "breakfastIncluded": false,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "01/27",
+        "region": "藏王",
+        "breakfastTwd": 0,
+        "lunchTwd": 1500,
+        "dinnerTwd": 0,
+        "snacksTwd": 300,
+        "totalTwd": 1800,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "01/28",
+        "region": "藏王",
+        "breakfastTwd": 0,
+        "lunchTwd": 1500,
+        "dinnerTwd": 0,
+        "snacksTwd": 300,
+        "totalTwd": 1800,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "01/29",
+        "region": "藏王",
+        "breakfastTwd": 0,
+        "lunchTwd": 1500,
+        "dinnerTwd": 0,
+        "snacksTwd": 300,
+        "totalTwd": 1800,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "01/30",
+        "region": "藏王",
+        "breakfastTwd": 0,
+        "lunchTwd": 1500,
+        "dinnerTwd": 0,
+        "snacksTwd": 300,
+        "totalTwd": 1800,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "01/31",
+        "region": "天童",
+        "breakfastTwd": 0,
+        "lunchTwd": 1600,
+        "dinnerTwd": 0,
+        "snacksTwd": 400,
+        "totalTwd": 2000,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "02/01",
+        "region": "天童",
+        "breakfastTwd": 0,
+        "lunchTwd": 1600,
+        "dinnerTwd": 0,
+        "snacksTwd": 400,
+        "totalTwd": 2000,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "02/02",
+        "region": "天童",
+        "breakfastTwd": 0,
+        "lunchTwd": 1600,
+        "dinnerTwd": 0,
+        "snacksTwd": 400,
+        "totalTwd": 2000,
+        "breakfastIncluded": true,
+        "dinnerIncluded": true
+      },
+      {
+        "date": "02/03",
+        "region": "東京",
+        "breakfastTwd": 0,
+        "lunchTwd": 1800,
+        "dinnerTwd": 2400,
+        "snacksTwd": 300,
+        "totalTwd": 4500,
+        "breakfastIncluded": true,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "02/04",
+        "region": "東京",
+        "breakfastTwd": 1200,
+        "lunchTwd": 2100,
+        "dinnerTwd": 2700,
+        "snacksTwd": 500,
+        "totalTwd": 6500,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "02/05",
+        "region": "東京",
+        "breakfastTwd": 1200,
+        "lunchTwd": 2100,
+        "dinnerTwd": 2700,
+        "snacksTwd": 500,
+        "totalTwd": 6500,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      },
+      {
+        "date": "02/06",
+        "region": "東京",
+        "breakfastTwd": 1200,
+        "lunchTwd": 2100,
+        "dinnerTwd": 0,
+        "snacksTwd": 1200,
+        "totalTwd": 4500,
+        "breakfastIncluded": false,
+        "dinnerIncluded": false
+      }
+    ]
   },
   "regions": [
     {
