@@ -44,7 +44,7 @@
     "paymentUnknownTwd": 47952,
     "missingAmountItems": 7,
     "paymentCheckItems": 4,
-    "note": "預算＝已確認金額＋未確認暫估；以三人同行估算。含餐飯店不重複計早餐晚餐；跨區交通按目的地分攤。機票列共通預估，未查核實際付款。暫估不是報價，未含購物金額；幣別 NT$，日圓暫按 0.22 換算。",
+    "note": "預算＝已確認金額＋未確認暫估；以三人同行估算。含餐飯店不重複計早餐晚餐；跨區交通按目的地分攤。機票列共通預估，未查核實際付款。暫估不是報價，未含購物金額；幣別 NT$，日圓暫按 0.22 換算。 跨區交通依抵達區域歸屬，接駁若未獲確認須重新估價；交通拆項不改變目前區域預算合計。",
     "regionBreakdown": [
       {
         "name": "仙台",
@@ -99,8 +99,15 @@
       {
         "region": "仙台",
         "category": "交通",
-        "name": "市區交通、松島往返、機場進城",
-        "twd": 9000,
+        "name": "仙台機場→市區",
+        "twd": 1500,
+        "status": "estimated"
+      },
+      {
+        "region": "仙台",
+        "category": "交通",
+        "name": "仙台市區交通／松島往返",
+        "twd": 7500,
         "status": "estimated"
       },
       {
@@ -127,8 +134,15 @@
       {
         "region": "藏王",
         "category": "交通",
-        "name": "仙台→山形與山形站接駁／市內交通",
+        "name": "仙台→山形 JR／巴士",
         "twd": 3500,
+        "status": "estimated"
+      },
+      {
+        "region": "藏王",
+        "category": "交通",
+        "name": "山形站→四季飯店接駁（已申請，待確認）",
+        "twd": 0,
         "status": "estimated"
       },
       {
@@ -176,8 +190,22 @@
       {
         "region": "山形／天童",
         "category": "交通",
-        "name": "山形→天童、山寺及周邊移動",
-        "twd": 4500,
+        "name": "四季→山形站飯店接駁（已申請，待確認）",
+        "twd": 0,
+        "status": "estimated"
+      },
+      {
+        "region": "山形／天童",
+        "category": "交通",
+        "name": "山形站→天童 JR／飯店交通",
+        "twd": 1000,
+        "status": "estimated"
+      },
+      {
+        "region": "山形／天童",
+        "category": "交通",
+        "name": "山寺與天童周邊交通",
+        "twd": 3500,
         "status": "estimated"
       },
       {
@@ -204,8 +232,22 @@
       {
         "region": "東京",
         "category": "交通",
-        "name": "天童→東京新幹線、東京市內、成田交通",
-        "twd": 19000,
+        "name": "天童／山形→東京新幹線",
+        "twd": 13500,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "交通",
+        "name": "東京市區交通",
+        "twd": 3000,
+        "status": "estimated"
+      },
+      {
+        "region": "東京",
+        "category": "交通",
+        "name": "東京→成田機場",
+        "twd": 2500,
         "status": "estimated"
       },
       {
