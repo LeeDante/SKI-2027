@@ -263,3 +263,10 @@ img,svg{max-width:100%}
 .overview-image-links a{display:block;padding:13px 15px;border:1px solid rgba(255,255,255,.45);border-radius:12px;background:rgba(11,18,32,.84);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 8px 25px rgba(0,0,0,.24);backdrop-filter:blur(8px)}
 .overview-image-links a:hover,.overview-image-links a:focus-visible{background:rgba(35,84,140,.95);outline:2px solid #fff}
 @media(max-width:600px){.overview-route-photo{min-height:0}.overview-image-links{right:8px;width:38%;gap:5px}.overview-image-links a{padding:7px 8px;font-size:11px;border-radius:7px}}
+
+.category-budget-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.category-budget-item{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px;display:grid;gap:10px}
+.category-budget-item strong{font-size:15px}.category-budget-item span{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.category-budget-item .bar{margin:0}
+@media(max-width:760px){.category-budget-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.category-budget-grid{grid-template-columns:1fr}}
