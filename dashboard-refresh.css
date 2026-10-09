@@ -1,0 +1,14 @@
+
+/* Budget dashboard layout refinement */
+.home-overview .dashboard-grid{align-items:stretch!important}
+.home-overview .dashboard-grid>.budget-column-heading{grid-column:1;grid-row:2;align-self:end;font-size:19px;font-weight:800;padding:0 2px}
+.home-overview .dashboard-grid>.budget-panel{grid-column:1;grid-row:3;display:flex;flex-direction:column;min-width:0}
+.home-overview .dashboard-grid>#categoryBudget{grid-column:2;grid-row:2/span 2;min-width:0}
+#categoryBudget .category-budget-item{grid-template-columns:44px minmax(0,1fr) 98px}
+#categoryBudget .category-budget-meter{display:flex;flex-direction:column;gap:9px;align-items:flex-end;min-width:0}
+#categoryBudget .category-budget-meter>strong{font-size:19px;line-height:1;font-weight:800}
+#categoryBudget .category-budget-ticks{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;width:94px;height:9px}
+#categoryBudget .category-budget-ticks i{display:block;border-radius:2px;background:var(--panel2);border:1px solid var(--line)}
+#categoryBudget .category-budget-ticks i.filled{background:var(--accent);border-color:var(--accent)}
+@media(max-width:760px){.home-overview .dashboard-grid>.budget-column-heading,.home-overview .dashboard-grid>.budget-panel,.home-overview .dashboard-grid>#categoryBudget{grid-column:1;grid-row:auto}}
+@media(max-width:380px){#categoryBudget .category-budget-item{grid-template-columns:34px minmax(0,1fr) 74px;gap:8px}#categoryBudget .category-budget-ticks{width:72px;gap:2px}}
