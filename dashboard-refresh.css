@@ -12,3 +12,17 @@
 #categoryBudget .category-budget-ticks i.filled{background:var(--accent);border-color:var(--accent)}
 @media(max-width:760px){.home-overview .dashboard-grid>.budget-column-heading,.home-overview .dashboard-grid>.budget-panel,.home-overview .dashboard-grid>#categoryBudget{grid-column:1;grid-row:auto}}
 @media(max-width:380px){#categoryBudget .category-budget-item{grid-template-columns:34px minmax(0,1fr) 74px;gap:8px}#categoryBudget .category-budget-ticks{width:72px;gap:2px}}
+
+/* Matching budget columns: heading and card always start together */
+.home-overview .dashboard-grid{align-items:stretch!important}
+.home-overview .dashboard-grid>.budget-left-column{grid-column:1;grid-row:2;min-width:0;display:flex;flex-direction:column;gap:12px}
+.home-overview .budget-left-column>.budget-column-heading{font-size:19px;font-weight:800;line-height:1.3;margin:0;padding:0 2px;min-height:25px}
+.home-overview .budget-left-column>.budget-panel{flex:1;min-width:0;display:flex;flex-direction:column}
+.home-overview .budget-left-column #budgetOverallTotal{margin-top:auto}
+.home-overview .dashboard-grid>#categoryBudget{grid-column:2;grid-row:2;align-self:stretch;min-width:0}
+#categoryBudget .regional-budget-head{min-height:25px}
+#categoryBudget .category-budget-item{min-height:84px}
+@media(max-width:760px){
+.home-overview .dashboard-grid>.budget-left-column,.home-overview .dashboard-grid>#categoryBudget{grid-column:1;grid-row:auto}
+.home-overview .budget-left-column>.budget-panel{flex:auto}
+}
