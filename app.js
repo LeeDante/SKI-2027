@@ -104,15 +104,17 @@ function isConfirmedSlot(day,key){
  if(/待定|待確認|候選|參考|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
  return /已訂|已預約|已確認|\d{1,2}:\d{2}.*(起飛|抵達)|入住|換房/.test(v);
 }
+function itinerarySlotStatus(day,key){const explicit=day.slotStates?.[key]?.status;return explicit==='pending'?'is-pending':(isConfirmedSlot(day,key)?'is-filled':'is-empty');}
+function itineraryTodoHint(day,key){const x=day.slotStates?.[key];return x?.status==='pending'?'<a class="schedule-todo-link" href="#todos" title="前往待辦事項：'+(x.todo||'')+'">待預約／付款 ↗</a>':'';}
 function renderItinerary(){
- $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+overviewSlotNames.map(([k,label])=>'<span class="schedule-slot '+(isConfirmedSlot(x,k)?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
+ $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+overviewSlotNames.map(([k,label])=>'<span class="schedule-slot '+itinerarySlotStatus(x,k)+'">'+label+'</span>').join('')+'</div></button>').join('');
  $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{$$('.itinerary-item').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderItineraryDetail(Number(b.dataset.i));}));
  renderItineraryDetail(0);
 }
 function renderItineraryDetail(i){
  const x=DATA.itinerary[i],s=x.schedule||{},detail=$('#itineraryDetail');
  detail.className='panel itinerary-detail region-'+regionClass(x.region);
- detail.innerHTML='<div class="detail-top"><div><div class="detail-region">'+x.region+'</div><div class="detail-date">'+x.date+'</div></div><span class="status detail-status">'+x.status+'</span></div><h3 class="detail-title">'+x.title+'</h3><p class="detail-summary">'+x.summary+'</p><div class="day-schedule">'+slotNames.map(([k,label])=>'<div class="day-schedule-row"><strong>'+label+'</strong><span>'+(s[k]||'待安排')+'</span></div>').join('')+'</div><details><summary>交通與備案詳細備註</summary><ul class="detail-list">'+x.details.map(v=>'<li>'+v+'</li>').join('')+'</ul></details>';
+ detail.innerHTML='<div class="detail-top"><div><div class="detail-region">'+x.region+'</div><div class="detail-date">'+x.date+'</div></div><span class="status detail-status">'+x.status+'</span></div><h3 class="detail-title">'+x.title+'</h3><p class="detail-summary">'+x.summary+'</p><div class="day-schedule">'+slotNames.map(([k,label])=>'<div class="day-schedule-row"><strong>'+label+'</strong><span>'+(s[k]||'待安排')+itineraryTodoHint(x,k)+'</span></div>').join('')+'</div><details><summary>交通與備案詳細備註</summary><ul class="detail-list">'+x.details.map(v=>'<li>'+v+'</li>').join('')+'</ul></details>';
 }
 
 function initRegionJumps(){
