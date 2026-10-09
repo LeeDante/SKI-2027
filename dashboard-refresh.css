@@ -49,3 +49,17 @@
 .food-pending .food-reservation-tag{color:#e1ad56}
 .food-booked .food-reservation-tag{color:#39bd8c}
 .food-walkin .food-reservation-tag{color:#68aef1}
+
+
+/* Itinerary decision vs. booking/payment state */
+.itinerary-row-slots .schedule-slot.is-pending{
+  background:color-mix(in srgb,var(--region-color) 23%,var(--panel))!important;
+  border:2px dashed #e1ad56!important;
+  color:color-mix(in srgb,var(--region-color) 68%,white)!important;
+  opacity:1!important;
+}
+[data-theme="light"] .itinerary-row-slots .schedule-slot.is-pending{
+  color:color-mix(in srgb,var(--region-color) 76%,#263b45)!important;
+}
+.schedule-todo-link{display:inline-block;margin-left:9px;padding:2px 7px;border:1px dashed #e1ad56;border-radius:6px;color:#d8a24a;font-size:11px;font-weight:700;text-decoration:none}
+.schedule-todo-link:hover{text-decoration:underline}
