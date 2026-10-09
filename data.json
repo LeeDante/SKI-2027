@@ -724,6 +724,15 @@
         "afternoon": {
           "status": "pending",
           "todo": "四季入住細節確認"
+        },
+        "morning": {
+          "status": "planned"
+        },
+        "lunch": {
+          "status": "planned"
+        },
+        "dinner": {
+          "status": "planned"
         }
       }
     },
@@ -747,6 +756,24 @@
         "afternoon": "中文教練候選",
         "dinner": "四季含晚餐",
         "evening": "休息"
+      },
+      "slotStates": {
+        "breakfast": {
+          "status": "planned"
+        },
+        "morning": {
+          "status": "planned"
+        },
+        "lunch": {
+          "status": "planned"
+        },
+        "dinner": {
+          "status": "planned"
+        },
+        "afternoon": {
+          "status": "pending",
+          "todo": "確認藏王中文教練"
+        }
       }
     },
     {
@@ -768,6 +795,23 @@
         "afternoon": "教練／基礎練習",
         "dinner": "四季含晚餐",
         "evening": "休息"
+      },
+      "slotStates": {
+        "breakfast": {
+          "status": "planned"
+        },
+        "morning": {
+          "status": "planned"
+        },
+        "lunch": {
+          "status": "planned"
+        },
+        "afternoon": {
+          "status": "planned"
+        },
+        "dinner": {
+          "status": "planned"
+        }
       }
     },
     {
@@ -796,6 +840,19 @@
         "morning": {
           "status": "pending",
           "todo": "四季入住細節確認"
+        },
+        "breakfast": {
+          "status": "planned"
+        },
+        "lunch": {
+          "status": "planned"
+        },
+        "dinner": {
+          "status": "planned"
+        },
+        "afternoon": {
+          "status": "pending",
+          "todo": "確認藏王中文教練"
         }
       }
     },
@@ -818,6 +875,23 @@
         "afternoon": "練習綠線",
         "dinner": "四季含晚餐",
         "evening": "整理行李"
+      },
+      "slotStates": {
+        "breakfast": {
+          "status": "planned"
+        },
+        "morning": {
+          "status": "planned"
+        },
+        "lunch": {
+          "status": "planned"
+        },
+        "afternoon": {
+          "status": "planned"
+        },
+        "dinner": {
+          "status": "planned"
+        }
       }
     },
     {
@@ -1137,6 +1211,10 @@
     }
   ],
   "recentChanges": [
+    {
+      "date": "2026-10-09",
+      "text": "藏王 1/26–1/30 行程燈號補正：已排定時段改為亮燈；尚待教練預約、早餐加購、雪具／換房確認者以虛線亮燈提示。"
+    },
     {
       "date": "2026-10-09",
       "text": "1/29上午確定先打包、舊房退房與行李寄放／換房交接，上午亮燈虛線待飯店確認；四季寄信待辦新增是否可協助把行李從舊房移至新房。"
