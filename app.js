@@ -104,7 +104,7 @@ function isConfirmedSlot(day,key){
  if(/待定|待確認|候選|參考|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
  return /已訂|已預約|已確認|\d{1,2}:\d{2}.*(起飛|抵達)|入住|換房/.test(v);
 }
-function itinerarySlotStatus(day,key){const explicit=day.slotStates?.[key]?.status;return explicit==='pending'?'is-pending':(isConfirmedSlot(day,key)?'is-filled':'is-empty');}
+function itinerarySlotStatus(day,key){const explicit=day.slotStates?.[key]?.status;if(explicit==='pending')return 'is-pending';if(explicit==='planned'||explicit==='confirmed')return 'is-filled';return isConfirmedSlot(day,key)?'is-filled':'is-empty';}
 function itineraryTodoHint(day,key){const x=day.slotStates?.[key];return x?.status==='pending'?'<a class="schedule-todo-link" href="#todos" title="前往待辦事項：'+(x.todo||'')+'">待預約／付款 ↗</a>':'';}
 function renderItinerary(){
  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+overviewSlotNames.map(([k,label])=>'<span class="schedule-slot '+itinerarySlotStatus(x,k)+'">'+label+'</span>').join('')+'</div></button>').join('');
