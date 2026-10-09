@@ -89,6 +89,7 @@ function renderRegions(){
 }
 
 const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐'],['evening','晚上']];
+const overviewSlotNames=[['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐']];
 function isConfirmedSlot(day,key){
  const plannedTourDays=['01/23','01/24','01/25'];
  if(plannedTourDays.includes(day.date)&&(key==='morning'||key==='afternoon'))return true;
@@ -101,7 +102,7 @@ function isConfirmedSlot(day,key){
  return false;
 }
 function renderItinerary(){
- $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+slotNames.map(([k,label])=>'<span class="schedule-slot '+(isConfirmedSlot(x,k)?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
+ $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+overviewSlotNames.map(([k,label])=>'<span class="schedule-slot '+(isConfirmedSlot(x,k)?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
  $$('.itinerary-item').forEach(b=>b.addEventListener('click',()=>{$$('.itinerary-item').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderItineraryDetail(Number(b.dataset.i));}));
  renderItineraryDetail(0);
 }
