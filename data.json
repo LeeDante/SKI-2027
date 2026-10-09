@@ -1015,6 +1015,10 @@
   "recentChanges": [
     {
       "date": "2026-10-09",
+      "text": "美食卡片以午餐／晚餐／小吃分類，已排定餐點置頂並標日期；新增推薦餐點、預約與菜單標籤，現場候位、待預約及已預約用不同框線區分。"
+    },
+    {
+      "date": "2026-10-09",
       "text": "1/21晚餐首選利久 Don Quijote 仙台站前店，候補善治郎／飯店 MUSUBI；新增預約待辦。1/22採買日午餐暫排牛たん料理 閣本店，現場候位並提早領整理券。"
     },
     {
@@ -1300,14 +1304,19 @@
       "meals": {
         "lunch": [
           {
-            "name": "牛たん料理 閣／仙台牛舌候選",
-            "category": "牛舌",
-            "price": "約 ¥2,000～3,500",
-            "note": "厚切牛舌是仙台代表料理；午餐比晚餐更容易彈性安排，適合採買或市區日。特色是炭火香氣與麥飯、牛尾湯的經典組合。",
-            "reservation": "網路訂位優先確認",
-            "menu": "圖片／文字菜單",
-            "family": "適合",
-            "url": "https://gyutankaku-online.com/"
+            "name": "牛たん料理 閣 ブランドーム本店",
+            "category": "牛舌・必吃",
+            "price": "定食約 ¥2,970 起（依現場）",
+            "note": "1/22 仙台採買日午餐；建議10:30先領整理券，11:30起依叫號用餐。",
+            "recommendedDish": "炭火烤牛舌定食（たん焼き定食）；可加點牛舌角煮",
+            "date": "01/22",
+            "order": 1,
+            "bookingType": "walkin",
+            "bookingStatus": "walkin",
+            "reservation": "午餐現場候位／整理券",
+            "menu": "官方圖文菜單",
+            "family": "親子適合",
+            "url": "https://gyutankaku.in/menu"
           },
           {
             "name": "仙台站牛舌通",
@@ -1317,10 +1326,28 @@
             "reservation": "多數現場候位",
             "menu": "店頭實體／圖片菜單",
             "family": "適合",
-            "url": "https://www.livit.jregroup.ne.jp/detail/213"
+            "url": "https://www.livit.jregroup.ne.jp/detail/213",
+            "recommendedDish": "厚切炭烤牛舌定食",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin"
           }
         ],
         "dinner": [
+          {
+            "name": "牛たん炭焼 利久 ドン・キホーテ仙台駅前店",
+            "category": "牛舌・抵達日晚餐",
+            "price": "依當日菜單",
+            "note": "1/21 約19:00，2大1小；未完成網路訂位。候補善治郎站前本店／飯店13F MUSUBI。",
+            "recommendedDish": "炭火牛舌定食、麥飯與牛尾湯",
+            "date": "01/21",
+            "order": 0,
+            "bookingType": "reservation",
+            "bookingStatus": "pending",
+            "reservation": "網路預約待完成",
+            "menu": "店家圖文菜單待確認",
+            "family": "適合",
+            "url": "https://rikyuu-donkihote.owst.jp/"
+          },
           {
             "name": "田なか屋本店 仙台駅前",
             "category": "仙台鄉土料理・せり鍋",
@@ -1329,7 +1356,10 @@
             "reservation": "可網路預約",
             "menu": "官網完整圖文菜單",
             "family": "適合；有包廂",
-            "url": "https://tanakayasendai.owst.jp/"
+            "url": "https://tanakayasendai.owst.jp/",
+            "recommendedDish": "冬季仙台芹菜鍋（せり鍋）",
+            "bookingType": "reservation",
+            "bookingStatus": "unconfirmed"
           },
           {
             "name": "牛たん焼専門店 司 東口店",
@@ -1339,7 +1369,10 @@
             "reservation": "可事先確認訂位",
             "menu": "實體／圖文菜單",
             "family": "適合",
-            "url": "https://www.gyutan-tsukasa.com/view/page/shop"
+            "url": "https://www.gyutan-tsukasa.com/view/page/shop",
+            "recommendedDish": "炭烤牛舌定食",
+            "bookingType": "unknown",
+            "bookingStatus": "unconfirmed"
           }
         ],
         "snack": [
@@ -1351,7 +1384,10 @@
             "reservation": "不需預約",
             "menu": "櫃位圖文菜單",
             "family": "很適合",
-            "url": "https://zundasaryo.com/"
+            "url": "https://zundasaryo.com/",
+            "recommendedDish": "毛豆奶昔（ずんだシェイク）、毛豆麻糬",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin"
           }
         ]
       }
@@ -1368,7 +1404,10 @@
             "reservation": "通常不需預約",
             "menu": "店頭實體菜單",
             "family": "適合",
-            "url": "https://www.zao-spa.or.jp/"
+            "url": "https://www.zao-spa.or.jp/",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "dinner": [
@@ -1380,7 +1419,10 @@
             "reservation": "隨住宿方案",
             "menu": "會席內容／現場說明",
             "family": "住宿客適合",
-            "url": "https://www.zao-shikinohotel.jp/dishes/"
+            "url": "https://www.zao-shikinohotel.jp/dishes/",
+            "bookingType": "unknown",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "snack": [
@@ -1392,7 +1434,10 @@
             "reservation": "不需預約",
             "menu": "店頭菜單",
             "family": "適合",
-            "url": "https://www.zao-spa.or.jp/"
+            "url": "https://www.zao-spa.or.jp/",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin",
+            "recommendedDish": "待選定推薦餐點"
           }
         ]
       }
@@ -1409,7 +1454,10 @@
             "reservation": "依店家；午餐可彈性",
             "menu": "實體菜單",
             "family": "適合",
-            "url": "https://www.tendodays.com/"
+            "url": "https://www.tendodays.com/",
+            "bookingType": "unknown",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "dinner": [
@@ -1421,7 +1469,10 @@
             "reservation": "已隨住宿預訂",
             "menu": "會席／飯店提供",
             "family": "適合",
-            "url": "https://www.takinoyu.com/"
+            "url": "https://www.takinoyu.com/",
+            "bookingType": "unknown",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "snack": [
@@ -1433,7 +1484,10 @@
             "reservation": "通常不需預約",
             "menu": "店頭圖文菜單",
             "family": "很適合",
-            "url": "https://yamagatakanko.com/"
+            "url": "https://yamagatakanko.com/",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin",
+            "recommendedDish": "待選定推薦餐點"
           }
         ]
       }
@@ -1450,7 +1504,10 @@
             "reservation": "可網路預約",
             "menu": "官網圖文菜單",
             "family": "適合；兒童餐 ¥1,900 起",
-            "url": "https://www.innsyoutei.jp/"
+            "url": "https://www.innsyoutei.jp/",
+            "bookingType": "reservation",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           },
           {
             "name": "洋食 黒船亭",
@@ -1460,7 +1517,10 @@
             "reservation": "可網路預約",
             "menu": "官網完整圖文菜單",
             "family": "很適合",
-            "url": "https://www.kurofunetei.co.jp/"
+            "url": "https://www.kurofunetei.co.jp/",
+            "bookingType": "reservation",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "dinner": [
@@ -1472,7 +1532,10 @@
             "reservation": "可網路預約",
             "menu": "官網完整圖文菜單",
             "family": "很適合",
-            "url": "https://www.kurofunetei.co.jp/"
+            "url": "https://www.kurofunetei.co.jp/",
+            "bookingType": "reservation",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           },
           {
             "name": "上野の杜 韻松亭",
@@ -1482,7 +1545,10 @@
             "reservation": "可網路預約",
             "menu": "官網圖文菜單",
             "family": "適合；有兒童料理",
-            "url": "https://www.innsyoutei.jp/"
+            "url": "https://www.innsyoutei.jp/",
+            "bookingType": "reservation",
+            "bookingStatus": "unconfirmed",
+            "recommendedDish": "待選定推薦餐點"
           }
         ],
         "snack": [
@@ -1494,7 +1560,10 @@
             "reservation": "小吃不需預約",
             "menu": "官網完整圖文價格",
             "family": "很適合",
-            "url": "https://www.mihashi.co.jp/"
+            "url": "https://www.mihashi.co.jp/",
+            "bookingType": "walkin",
+            "bookingStatus": "walkin",
+            "recommendedDish": "待選定推薦餐點"
           }
         ]
       }
