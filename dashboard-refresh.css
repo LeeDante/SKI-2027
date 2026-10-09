@@ -26,3 +26,8 @@
 .home-overview .dashboard-grid>.budget-left-column,.home-overview .dashboard-grid>#categoryBudget{grid-column:1;grid-row:auto}
 .home-overview .budget-left-column>.budget-panel{flex:auto}
 }
+
+/* Six compact itinerary labels on one line */
+.itinerary-row-slots{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:3px!important;width:100%!important;min-width:0!important}
+.itinerary-row-slots .schedule-slot{min-width:0!important;white-space:nowrap!important;font-size:9px!important;padding:2px 1px!important;height:21px!important;letter-spacing:0!important}
+@media(max-width:500px){.itinerary-row-slots{gap:2px!important}.itinerary-row-slots .schedule-slot{font-size:8px!important;padding:2px 0!important;height:20px!important}}
