@@ -304,3 +304,15 @@ img,svg{max-width:100%}
 .mini-trip-card>summary span{font-size:19px;opacity:.7;transition:transform .2s}
 .mini-trip-card[open]>summary span{transform:rotate(180deg)}
 .mini-trip-expanded{padding:0 15px 15px}
+
+/* SKI-2027 compact preparation progress */
+.home-overview .progress-panel{align-self:start;min-height:0!important;padding:16px 18px!important;display:block!important}
+.home-overview .progress-panel .panel-title{margin:0 0 8px!important}
+.home-overview .progress-main{margin:0 0 10px!important;gap:5px;align-items:baseline}
+.home-overview .progress-main strong{font-size:34px!important;line-height:1.1}
+.home-overview .progress-main span{font-size:16px!important}
+.home-overview .progress-panel>.bar{height:6px!important;margin:0 0 10px!important}
+.home-overview .progress-panel .mini-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important;margin-top:0!important}
+.home-overview .progress-panel .mini-progress{min-height:0!important;margin:0!important;padding:8px 10px!important;border-radius:10px!important}
+.home-overview .progress-panel .mini-progress b{font-size:14px!important;line-height:1.15!important}
+@media(min-width:760px){.home-overview .dashboard-grid{align-items:start}}
