@@ -88,7 +88,7 @@ function renderRegions(){
     </article>`).join('');
 }
 
-const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐'],['evening','晚上']];
+const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐']];
 const overviewSlotNames=slotNames;
 function isConfirmedSlot(day,key){
  const plannedTourDays=['01/23','01/24','01/25'];
