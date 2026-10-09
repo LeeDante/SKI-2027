@@ -36,3 +36,16 @@
 .itinerary-row-slots{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important}
 .itinerary-row-slots .schedule-slot{font-size:11px!important;padding:3px 2px!important;height:25px!important}
 @media(max-width:500px){.itinerary-row-slots{gap:3px!important}.itinerary-row-slots .schedule-slot{font-size:10px!important;padding:2px 1px!important;height:23px!important}}
+
+/* Food decisions and reservation status */
+.food-card{border-width:2px!important}
+.food-card.food-pending{border-style:dashed!important;border-color:#e1ad56!important}
+.food-card.food-booked{border-style:solid!important;border-color:#39bd8c!important}
+.food-card.food-walkin{border-style:solid!important;border-color:#68aef1!important}
+.food-card.food-unknown{border:1px solid var(--line)!important}
+.food-date{display:inline-block;margin:0 0 7px;padding:3px 8px;border-radius:7px;background:color-mix(in srgb,var(--accent) 18%,var(--panel));color:var(--accent);font-size:12px;font-weight:750}
+.food-card .food-recommend{font-size:12px;color:var(--text);padding:8px 10px;border-radius:9px;background:var(--panel2);margin:6px 0 9px;line-height:1.55}
+.food-reservation-tag{font-weight:750}
+.food-pending .food-reservation-tag{color:#e1ad56}
+.food-booked .food-reservation-tag{color:#39bd8c}
+.food-walkin .food-reservation-tag{color:#68aef1}
