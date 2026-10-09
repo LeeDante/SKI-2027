@@ -31,3 +31,8 @@
 .itinerary-row-slots{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:3px!important;width:100%!important;min-width:0!important}
 .itinerary-row-slots .schedule-slot{min-width:0!important;white-space:nowrap!important;font-size:9px!important;padding:2px 1px!important;height:21px!important;letter-spacing:0!important}
 @media(max-width:500px){.itinerary-row-slots{gap:2px!important}.itinerary-row-slots .schedule-slot{font-size:8px!important;padding:2px 0!important;height:20px!important}}
+
+/* Five legible itinerary labels through dinner */
+.itinerary-row-slots{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important}
+.itinerary-row-slots .schedule-slot{font-size:11px!important;padding:3px 2px!important;height:25px!important}
+@media(max-width:500px){.itinerary-row-slots{gap:3px!important}.itinerary-row-slots .schedule-slot{font-size:10px!important;padding:2px 1px!important;height:23px!important}}
