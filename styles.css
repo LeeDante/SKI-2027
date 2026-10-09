@@ -289,11 +289,11 @@ img,svg{max-width:100%}
 @media(max-width:900px){.regional-ring-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.regional-ring-grid{grid-template-columns:1fr 1fr;gap:9px}.region-ring{width:108px}.region-ring-core strong{font-size:23px}.ring-amounts{grid-template-columns:1fr;gap:7px}}
 /* Invisible links aligned to the four photo strips on the right side of the route image */
-.overview-image-links{position:absolute;left:68%;right:2%;top:6%;bottom:6%;width:auto;transform:none;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:1%;z-index:2;pointer-events:none}
+.overview-image-links{position:absolute;left:80%;right:2%;top:3%;bottom:6%;width:auto;transform:none;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:1%;z-index:2;pointer-events:none}
 .overview-image-links a{display:block;min-height:0;padding:0;border:0;border-radius:8px;background:transparent!important;box-shadow:none;backdrop-filter:none;color:transparent;pointer-events:auto}
 .overview-image-links a:hover{outline:2px solid rgba(255,255,255,.65);outline-offset:-2px;background:rgba(255,255,255,.05)!important}
 .overview-image-links a:focus-visible{outline:3px solid #fff;outline-offset:-3px;background:rgba(255,255,255,.1)!important}
-@media(max-width:600px){.overview-image-links{left:68%;right:2%;top:6%;bottom:6%;width:auto;gap:1%}.overview-image-links a{padding:0;border-radius:4px}}
+@media(max-width:600px){.overview-image-links{left:80%;right:2%;top:3%;bottom:6%;width:auto;gap:1%}.overview-image-links a{padding:0;border-radius:4px}}
 
 /* Mini day trips: compact collapsed list */
 .mini-trip-grid{display:grid;grid-template-columns:1fr!important;gap:8px!important}
