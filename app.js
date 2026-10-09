@@ -179,14 +179,14 @@ function renderFoodGuide(){
     <section class="food-region">
       <div class="food-region-head"><h3>${area.region}</h3></div>
       <div class="food-meal-grid">${Object.entries(labels).map(([key,label])=>{
-        const items=area.meals[key]||[];
+        const items=[...(area.meals[key]||[])].sort((a,b)=>(a.date?0:1)-(b.date?0:1)||String(a.date||'').localeCompare(String(b.date||'')));
         return `<div class="food-meal-column"><div class="food-meal-head"><strong>${label}</strong><span>${items.length}</span></div>
           <div class="food-card-list">${items.length?items.map(x=>`
-            <article class="food-card">
+            <article class="food-card ${x.bookingType==='walkin'?'food-walkin':x.bookingType==='reservation'?(x.bookingStatus==='booked'?'food-booked':'food-pending'):'food-unknown'}">
               <div class="food-card-top"><span>${x.category||label}</span><small>${x.price||'價格待補'}</small></div>
-              <h4>${x.name}</h4><p>${x.note||''}</p>
+              <h4>${x.name}</h4>${x.date?`<div class="food-date">📅 ${x.date} 已排行程</div>`:''}<p>${x.note||''}</p><p class="food-recommend"><strong>推薦餐點：</strong>${x.recommendedDish||'待選定'}</p>
               <div class="food-tags">
-                <span>預約：${x.reservation||'待確認'}</span><span>菜單：${x.menu||'待確認'}</span><span>親子：${x.family||'待確認'}</span>
+                <span class="food-reservation-tag">${x.bookingType==='walkin'?'現場候位':x.bookingStatus==='booked'?'已預約':x.bookingType==='reservation'?'待預約':'預約待確認'}｜${x.reservation||'待確認'}</span><span>菜單：${x.menu||'待確認'}</span><span>親子：${x.family||'待確認'}</span>
               </div>
               ${x.url?'<a class="source-link" href="'+x.url+'" target="_blank" rel="noopener">查看餐廳 ↗</a>':''}
             </article>`).join(''):'<div class="food-empty">候選餐廳待加入</div>'}</div>
