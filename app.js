@@ -91,15 +91,18 @@ function renderRegions(){
 const slotNames=[['breakfast','早餐'],['morning','上午'],['lunch','午餐'],['afternoon','下午'],['dinner','晚餐']];
 const overviewSlotNames=slotNames;
 function isConfirmedSlot(day,key){
+ const v=String(day.schedule?.[key]||'').trim();
+ if(!v||/^(自理|待定|待確認|候選|參考|自由活動|休息|—)$/.test(v))return false;
+ // 已排定的用餐（包含現場候位、待訂位首選）與交通行程都可亮燈；
+ // 完成預約與否仍由待辦事項獨立追蹤。
+ if(['breakfast','lunch','dinner'].includes(key)){
+   if(/備案|候補/.test(v)&&!/首選|暫排|預排|機上餐|牛たん料理/.test(v))return false;
+   return /機上餐|含早餐|含晚餐|首選|預排|暫排|已訂|已預約|已確認|現場候位|牛たん料理|市場海鮮丼|餐廳|料理|定食/.test(v);
+ }
  const plannedTourDays=['01/23','01/24','01/25'];
  if(plannedTourDays.includes(day.date)&&(key==='morning'||key==='afternoon'))return true;
- const v=String(day.schedule?.[key]||'').trim();
- if(!v||/自理|待定|待確認|候選|參考|彈性|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
- if(key==='breakfast'||key==='dinner')return /含早餐|含晚餐/.test(v)&&!/衝突/.test(v);
- if(key==='lunch')return /已訂|已預約|已確認/.test(v);
- if(/已訂|已預約|已確認|\d{1,2}:\d{2}.*(起飛|抵達)/.test(v))return true;
- if(/入住|換房/.test(v)&&!/待/.test(v))return true;
- return false;
+ if(/待定|待確認|候選|參考|自由|休息|練習|整理|採買|購物|未訂|待訂|申請|或|—/.test(v))return false;
+ return /已訂|已預約|已確認|\d{1,2}:\d{2}.*(起飛|抵達)|入住|換房/.test(v);
 }
 function renderItinerary(){
  $('#itineraryList').innerHTML=DATA.itinerary.map((x,i)=>'<button class="itinerary-item itinerary-row region-'+regionClass(x.region)+' '+(i===0?'active':'')+'" data-i="'+i+'"><div class="itinerary-row-top"><span class="itinerary-date">'+x.date+'</span><span class="itinerary-day">'+x.day+'</span><strong class="itinerary-one-line">'+x.title+'</strong></div><div class="itinerary-row-slots">'+overviewSlotNames.map(([k,label])=>'<span class="schedule-slot '+(isConfirmedSlot(x,k)?'is-filled':'is-empty')+'">'+label+'</span>').join('')+'</div></button>').join('');
