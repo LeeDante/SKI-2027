@@ -4,7 +4,7 @@
     "subtitle": "2027 日本東北親子冬旅＋藏王滑雪",
     "dates": "2027-01-21 — 2027-02-06",
     "travelers": "2 大 1 小",
-    "lastUpdated": "2026-10-09",
+    "lastUpdated": "2026-10-10",
     "exchangeRate": "1 JPY = 0.22 TWD 試算",
     "timezone": "台灣時間"
   },
@@ -1303,6 +1303,10 @@
   ],
   "recentChanges": [
     {
+      "date": "2026/10/10",
+      "text": "新增「購物・伴手禮」分頁：仙台、藏王、山形／天童、東京四區選物資料；區分想買、參考與待確認，供後續旅遊書使用。"
+    },
+    {
       "date": "2026-10-10",
       "text": "2/2順序調整為上午霞城公園與博物館待到13:00，再回山形站吃平田牧場，飯後逛S-PAL文具／雜貨30～60分鐘，提早回天童。"
     },
@@ -2073,5 +2077,194 @@
     "餐廳至少要有紙本、圖片、平板或QR Code等可視菜單，方便手機拍照翻譯。",
     "優先確認2大1小可用餐、兒童友善與價格可事先查看。",
     "午餐與小吃可保留較高彈性；依當日行程與交通動線安排。"
+  ],
+  "shoppingGuide": [
+    {
+      "region": "仙台",
+      "category": "經典伴手禮",
+      "name": "菓匠三全｜萩之月",
+      "where": "仙台站 S-PAL、車站土產區",
+      "product": "萩之月卡士達蛋糕",
+      "status": "參考",
+      "date": "1/21–1/26",
+      "note": "送禮首選候選；確認效期及常溫保存條件",
+      "url": "https://www.sanzen.co.jp/"
+    },
+    {
+      "region": "仙台",
+      "category": "特色食品",
+      "name": "ずんだ茶寮｜毛豆甜點",
+      "where": "仙台站周邊",
+      "product": "毛豆奶昔、毛豆點心",
+      "status": "參考",
+      "date": "1/21–1/26",
+      "note": "奶昔現喝；伴手禮要挑可攜帶包裝",
+      "url": "https://www.sanzen.co.jp/"
+    },
+    {
+      "region": "仙台",
+      "category": "經典伴手禮",
+      "name": "支倉燒與白松最中",
+      "where": "仙台站 S-PAL 土產區",
+      "product": "支倉燒、最中、仙貝",
+      "status": "參考",
+      "date": "1/21–1/26",
+      "note": "比較獨立包裝及保存期限",
+      "url": "https://www.s-pal.jp/sendai/"
+    },
+    {
+      "region": "仙台",
+      "category": "特色購物",
+      "name": "S-PAL 仙台集中購物",
+      "where": "JR 仙台站直結",
+      "product": "宮城特產、東北精選食品",
+      "status": "參考",
+      "date": "1/21–1/26",
+      "note": "冬季省交通；不必專程奔波",
+      "url": "https://www.s-pal.jp/sendai/"
+    },
+    {
+      "region": "藏王",
+      "category": "冬季紀念品",
+      "name": "藏王樹冰主題小物",
+      "where": "藏王溫泉街／纜車站商店待核",
+      "product": "樹冰餅乾、雪景紀念品",
+      "status": "待確認",
+      "date": "1/26–1/31",
+      "note": "具體店家及現貨待查，勿列為必買",
+      "url": "https://zaomountainresort.com/"
+    },
+    {
+      "region": "藏王",
+      "category": "冬季紀念品",
+      "name": "藏王滑雪紀念品",
+      "where": "滑雪場及住宿附近商店待查",
+      "product": "纜車、雪板主題小物",
+      "status": "參考",
+      "date": "滑雪日彈性",
+      "note": "選輕量好收納品；雪場勿負重購物",
+      "url": "https://zaomountainresort.com/"
+    },
+    {
+      "region": "藏王",
+      "category": "地方伴手禮",
+      "name": "山形水果加工點心",
+      "where": "藏王土產店待核／山形市區也可買",
+      "product": "櫻桃、洋梨風味點心",
+      "status": "待確認",
+      "date": "1/26–1/31",
+      "note": "可以留到天童或山形買，減少搬運",
+      "url": "https://yamagatakanko.com/"
+    },
+    {
+      "region": "山形／天童",
+      "category": "經典伴手禮",
+      "name": "乃し梅本舖 佐藤屋",
+      "where": "山形市區／山形站周邊販售點待核",
+      "product": "乃し梅、和菓子",
+      "status": "參考",
+      "date": "2/1–2/3",
+      "note": "適合山形站停留時採買；確認分店與效期",
+      "url": "https://satoya-matsubei.com/"
+    },
+    {
+      "region": "山形／天童",
+      "category": "地方食品",
+      "name": "山形櫻桃・洋梨商品",
+      "where": "山形站土產區／天童土產店",
+      "product": "果凍、果醬、餅乾、飲品",
+      "status": "參考",
+      "date": "1/31–2/3",
+      "note": "冬季選加工品；玻璃瓶及液體注意托運",
+      "url": "https://yamagatakanko.com/"
+    },
+    {
+      "region": "山形／天童",
+      "category": "傳統工藝",
+      "name": "天童將棋紀念品",
+      "where": "天童車站及市區店家待查",
+      "product": "將棋駒造型吊飾、木工品",
+      "status": "參考",
+      "date": "2/1–2/2",
+      "note": "文化特色，適合旅遊書介紹；販售店待確認",
+      "url": "https://www.city.tendo.yamagata.jp/"
+    },
+    {
+      "region": "東京",
+      "category": "美妝",
+      "name": "SUQQU 專櫃",
+      "where": "銀座三越",
+      "product": "中型刷具；內附刷毛的眼影盤；頰彩",
+      "status": "想買",
+      "date": "2/5",
+      "note": "刷具型號、眼影盤刷具材質與色號需現場核對",
+      "url": "https://www.mistore.jp/store/ginza/shops/beauty/cosmetics.html"
+    },
+    {
+      "region": "東京",
+      "category": "美妝",
+      "name": "DECORTÉ 黛珂",
+      "where": "銀座三越",
+      "product": "Loose Powder 101 harmony veil 四色蜜粉",
+      "status": "想買",
+      "date": "2/5",
+      "note": "確認色號、庫存、2027 年售價",
+      "url": "https://www.decorte.com/site/g/gJEFR101/"
+    },
+    {
+      "region": "東京",
+      "category": "經典伴手禮",
+      "name": "銀座 菊廼舎",
+      "where": "銀座本店",
+      "product": "冨貴寄日式小餅乾禮盒",
+      "status": "參考",
+      "date": "2/5",
+      "note": "特色包裝，建議挑常溫易帶款",
+      "url": "https://www.ginza-kikunoya.co.jp/"
+    },
+    {
+      "region": "東京",
+      "category": "經典伴手禮",
+      "name": "銀座あけぼの",
+      "where": "銀座本店",
+      "product": "米菓、最中、仙貝",
+      "status": "參考",
+      "date": "2/5",
+      "note": "適合獨立小包裝送同事",
+      "url": "https://ginza-akebono.co.jp/"
+    },
+    {
+      "region": "東京",
+      "category": "百貨禮盒",
+      "name": "銀座三越 B2",
+      "where": "銀座三越",
+      "product": "和菓子、米菓、限定禮盒",
+      "status": "參考",
+      "date": "2/5",
+      "note": "美妝採買後直接下樓；避免冷藏商品",
+      "url": "https://www.mistore.jp/store/ginza.html"
+    },
+    {
+      "region": "東京",
+      "category": "特色購物",
+      "name": "GINZA SIX",
+      "where": "銀座六丁目",
+      "product": "高級甜點、日本茶、選物",
+      "status": "參考",
+      "date": "2/5",
+      "note": "步行順路備案，非必訪",
+      "url": "https://ginza6.tokyo/"
+    },
+    {
+      "region": "東京",
+      "category": "地方物產",
+      "name": "銀座 NAGANO",
+      "where": "銀座",
+      "product": "蘋果點心、信州加工食品",
+      "status": "參考",
+      "date": "2/5",
+      "note": "與東京伴手禮不同風格，營業狀態待確認",
+      "url": "https://www.ginza-nagano.jp/"
+    }
   ]
 }
