@@ -17,6 +17,7 @@ async function load(){
   renderTodos();
   renderMiniTrips();
   renderFoodGuide();
+  renderShoppingGuide();
   renderReferences();
   renderFooterBlocks();
   initTheme();
@@ -195,6 +196,20 @@ function renderFoodGuide(){
         </div>`;
       }).join('')}</div>
     </section>`).join('');
+}
+
+
+function renderShoppingGuide(){
+ const root=$('#shoppingGroups'); if(!root) return;
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const regions=['仙台','藏王','山形／天童','東京'];
+ const items=DATA.shoppingGuide||[];
+ root.innerHTML=regions.map(region=>{
+   const group=items.filter(x=>x.region===region);
+   return '<section class="shopping-region"><div class="shopping-region-heading"><h3>'+esc(region)+'</h3><span>'+group.length+' 個參考點</span></div><div class="shopping-grid">'+group.map(x=>
+     '<article class="shopping-card"><div class="shopping-card-head"><span class="shopping-kind">'+esc(x.category)+'</span><span class="shopping-status '+(x.status==='想買'?'want':x.status==='待確認'?'verify':'')+'">'+esc(x.status)+'</span></div><h4>'+esc(x.name)+'</h4><p class="shopping-location">📍 '+esc(x.where)+'</p><p><strong>推薦：</strong>'+esc(x.product)+'</p><p class="shopping-note">'+esc(x.note)+'</p><div class="shopping-card-foot"><span>📅 '+esc(x.date)+'</span><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">參考來源 ↗</a></div></article>'
+   ).join('')+'</div></section>';
+ }).join('');
 }
 
 function renderReferences(){
