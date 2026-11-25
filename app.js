@@ -75,6 +75,16 @@ function renderCategoryBudget(){
  $('#paymentUnknown').textContent=money(b.sharedTotalTwd);
  $('#budgetPercent').textContent=(total?Math.round(paid/total*100):0)+'% 已確認';
  $('#budgetBar i').style.width=(total?Math.min(100,paid/total*100):0)+'%';
+  if(b.costSharing){
+    const cs=b.costSharing, direct={A:0,B:0};
+    b.items.filter(x=>x.status==='confirmed' && Object.hasOwn(direct,x.payer)).forEach(x=>direct[x.payer]+=x.twd);
+    const net={...direct};
+    cs.transfers.forEach(t=>{net[t.from]+=t.twd;net[t.to]-=t.twd;});
+    const fmt=n=> 'NT$ '+Number(n).toLocaleString('zh-TW',{maximumFractionDigits:2});
+    const rows=['A','B'].map(p=>{const target=total*cs.shares[p], remain=target-net[p];return '<tr><th scope="row" style="text-align:left;padding:6px 4px">'+p+'</th><td style="text-align:right;padding:6px 4px">'+fmt(direct[p])+'</td><td style="text-align:right;padding:6px 4px">'+fmt(net[p])+'</td><td style="text-align:right;padding:6px 4px">'+fmt(target)+'</td><td style="text-align:right;padding:6px 4px">'+(remain<0?'多負擔 '+fmt(-remain):fmt(remain))+'</td></tr>';}).join('');
+    $('#costSharing').innerHTML='<div class="regional-budget-head"><h3>A／B 旅費分攤</h3><p>暫按各 50% 分攤（含小孩）；依已確認訂單金額計算，並非全數已扣款。</p></div><div class="category-budget-grid">'+['A','B'].map(p=>'<div class="category-budget-item"><div class="category-budget-copy"><strong>'+p+' 目前淨負擔</strong><span>'+fmt(net[p])+'</span><small>直接負擔 '+fmt(direct[p])+'</small></div><div class="category-budget-meter"><strong>'+((net[p]/paid)*100).toFixed(1)+'%</strong></div></div>').join('')+'</div><p class="tiny muted">轉帳：'+cs.transfers.map(t=>t.from+' → '+t.to+' '+fmt(t.twd)).join('；')+'（不重複計入旅費）</p><div style="overflow-x:auto"><table style="width:100%;font-size:13px;white-space:nowrap"><thead><tr><th>人員</th><th>直接負擔</th><th>淨負擔</th><th>預估應分攤</th><th>預估尚需負擔</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="tiny muted">'+cs.note+'</p>';
+  }
+
 }
 
 function renderRegions(){
