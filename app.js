@@ -51,7 +51,7 @@ function renderDashboard(){
   $('#budgetBar i').style.width=Math.min(bp,100)+'%';
   $('#budgetNote').textContent=b.note+'｜'+DATA.meta.exchangeRate;
   $('#knownPaid').textContent=money(b.regionSpentTotalTwd);
-  $('#budgetPercent').textContent=Math.round(b.regionSpentTotalTwd/b.limitTwd*100)+'%（已付／全程預算）';
+  $('#budgetPercent').textContent=Math.round(b.regionSpentTotalTwd/b.limitTwd*100)+'%（已確認／目標預算）';
   $('#budgetBar i').style.width=Math.min(100,Math.round(b.regionSpentTotalTwd/b.limitTwd*100))+'%';
   $('#regionalBudget').innerHTML='<div class="regional-budget-head"><h3>四區預算進度</h3><p>圓環代表已確認金額占各區預期花費的比例；數字仍以同一份費用明細為準</p></div><div class="regional-budget-grid regional-ring-grid">'+b.regionBreakdown.map((r,i)=>{const pct=r.plannedTwd?Math.round(r.spentTwd/r.plannedTwd*100):0;return '<article class="regional-budget-card regional-ring-card"><div class="regional-budget-title"><strong>'+String(i+1).padStart(2,'0')+' '+r.name+'</strong><a href="#itinerary" data-region-jump="'+r.name+'">看行程 ↗</a></div><div class="region-ring" style="--ring-pct:'+pct+'%"><div class="region-ring-core"><strong>'+pct+'%</strong><span>已確認</span></div></div><div class="ring-amounts"><div><small>已確認</small><strong>'+money(r.spentTwd)+'</strong></div><div><small>預期總額</small><strong>'+money(r.plannedTwd)+'</strong></div></div><small class="ring-pending">未確認暫估 '+money(r.estimatedTwd)+'</small></article>'}).join('')+'</div><div class="regional-budget-total"><span>四區預算合計</span><strong>'+money(b.regionSpentTotalTwd)+' / '+money(b.regionPlanTotalTwd)+'</strong><small>另計國際機票暫估 '+money(b.sharedEstimateTwd)+'；整趟預期 '+money(b.tripProjectedTwd)+'（購物未列）</small></div>';
 }
@@ -60,14 +60,14 @@ function renderCategoryBudget(){
  const b=DATA.budget, names={'住宿':'住宿','交通':'交通','餐飲':'餐飲','滑雪':'滑雪相關','活動':'活動／門票','機票':'國際機票'};
  const groups=Object.keys(names).map(k=>{
    const items=b.items.filter(x=>x.category===k);
-   const paid=items.filter(x=>x.status==='confirmed').reduce((n,x)=>n+x.twd,0);
+   const confirmed=items.filter(x=>x.status==='confirmed').reduce((n,x)=>n+x.twd,0);
    const total=items.reduce((n,x)=>n+x.twd,0);
-   return {name:names[k],paid,total};
+   return {name:names[k],paid:confirmed,total};
  });
  const paid=groups.reduce((n,x)=>n+x.paid,0),total=groups.reduce((n,x)=>n+x.total,0);
  const icons={'住宿':'🏨','交通':'🚆','餐飲':'🍽️','滑雪相關':'🎿','活動／門票':'🎟️','國際機票':'✈️'};
  $('#categoryBudget').innerHTML='<div class="regional-budget-head"><h3>總預算｜依費用類別</h3><p>十格刻度顯示已確認費用比例</p></div><div class="category-budget-grid">'+groups.map(x=>{const pct=x.total?Math.min(100,Math.round(x.paid/x.total*100)):0;return '<div class="category-budget-item"><div class="category-budget-icon" aria-hidden="true">'+icons[x.name]+'</div><div class="category-budget-copy"><strong>'+x.name+'</strong><span>已確認 '+money(x.paid)+'</span><small>預估 '+money(x.total)+'</small></div><div class="category-budget-meter" role="img" aria-label="'+x.name+'已確認 '+pct+'%"><strong>'+pct+'%</strong><div class="category-budget-ticks">'+Array.from({length:10},(_,i)=>'<i class="'+(pct>i*10?'filled':'')+'"></i>').join('')+'</div></div></div>'}).join('')+'</div>';
- $('#budgetOverallTotal').innerHTML='<span>整趟已確認／總預算</span><strong>'+money(paid)+' / '+money(total)+'</strong><small>未確認暫估 '+money(total-paid)+'；未列購物費</small>';
+ $('#budgetOverallTotal').innerHTML='<span>整趟已確認／預估總支出</span><strong>'+money(paid)+' / '+money(total)+'</strong><small>未確認暫估 '+money(total-paid)+'；原定預算 '+money(b.limitTwd)+'，預估超出 '+money(Math.max(0,total-b.limitTwd))+'；未列購物費</small>';
  $('#knownPaid').textContent=money(paid);
  $('#budgetLimit').textContent=money(total);
  $('#listedSubtotal').textContent=money(b.regionPlanTotalTwd);
