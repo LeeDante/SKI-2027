@@ -53,7 +53,7 @@ function renderDashboard(){
   $('#knownPaid').textContent=money(b.regionSpentTotalTwd);
   $('#budgetPercent').textContent=Math.round(b.regionSpentTotalTwd/b.limitTwd*100)+'%（已確認／目標預算）';
   $('#budgetBar i').style.width=Math.min(100,Math.round(b.regionSpentTotalTwd/b.limitTwd*100))+'%';
-  $('#regionalBudget').innerHTML='<div class="regional-budget-head"><h3>四區預算進度</h3><p>圓環代表已確認金額占各區預期花費的比例；數字仍以同一份費用明細為準</p></div><div class="regional-budget-grid regional-ring-grid">'+b.regionBreakdown.map((r,i)=>{const pct=r.plannedTwd?Math.round(r.spentTwd/r.plannedTwd*100):0;return '<article class="regional-budget-card regional-ring-card"><div class="regional-budget-title"><strong>'+String(i+1).padStart(2,'0')+' '+r.name+'</strong><a href="#itinerary" data-region-jump="'+r.name+'">看行程 ↗</a></div><div class="region-ring" style="--ring-pct:'+pct+'%"><div class="region-ring-core"><strong>'+pct+'%</strong><span>已確認</span></div></div><div class="ring-amounts"><div><small>已確認</small><strong>'+money(r.spentTwd)+'</strong></div><div><small>預期總額</small><strong>'+money(r.plannedTwd)+'</strong></div></div><small class="ring-pending">未確認暫估 '+money(r.estimatedTwd)+'</small></article>'}).join('')+'</div><div class="regional-budget-total"><span>四區預算合計</span><strong>'+money(b.regionSpentTotalTwd)+' / '+money(b.regionPlanTotalTwd)+'</strong><small>另計國際機票暫估 '+money(b.sharedEstimateTwd)+'；整趟預期 '+money(b.tripProjectedTwd)+'（購物未列）</small></div>';
+  $('#regionalBudget').innerHTML='<div class="regional-budget-head"><h3>四區預算進度</h3><p>圓環代表已確認金額占各區預期花費的比例；數字仍以同一份費用明細為準</p></div><div class="regional-budget-grid regional-ring-grid">'+b.regionBreakdown.map((r,i)=>{const pct=r.plannedTwd?Math.round(r.spentTwd/r.plannedTwd*100):0;return '<article class="regional-budget-card regional-ring-card"><div class="regional-budget-title"><strong>'+String(i+1).padStart(2,'0')+' '+r.name+'</strong><a href="#itinerary" data-region-jump="'+r.name+'">看行程 ↗</a></div><div class="region-ring" style="--ring-pct:'+pct+'%"><div class="region-ring-core"><strong>'+pct+'%</strong><span>已確認</span></div></div><div class="ring-amounts"><div><small>已確認</small><strong>'+money(r.spentTwd)+'</strong></div><div><small>預期總額</small><strong>'+money(r.plannedTwd)+'</strong></div></div><small class="ring-pending">未確認暫估 '+money(r.estimatedTwd)+'</small></article>'}).join('')+'</div><div class="regional-budget-total"><span>四區預算合計</span><strong>'+money(b.regionSpentTotalTwd)+' / '+money(b.regionPlanTotalTwd)+'</strong><small>另計回程機票 '+money(b.sharedTotalTwd)+'（去程稅費待確認）；整趟預期 '+money(b.tripProjectedTwd)+'（購物未列）</small></div>';
 }
 
 function renderCategoryBudget(){
@@ -72,7 +72,7 @@ function renderCategoryBudget(){
  $('#budgetLimit').textContent=money(total);
  $('#listedSubtotal').textContent=money(b.regionPlanTotalTwd);
  $('#knownUnpaid').textContent=money(total-paid);
- $('#paymentUnknown').textContent=money(b.sharedEstimateTwd);
+ $('#paymentUnknown').textContent=money(b.sharedTotalTwd);
  $('#budgetPercent').textContent=(total?Math.round(paid/total*100):0)+'% 已確認';
  $('#budgetBar i').style.width=(total?Math.min(100,paid/total*100):0)+'%';
 }
