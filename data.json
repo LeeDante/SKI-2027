@@ -87,7 +87,8 @@
         "category": "住宿",
         "name": "仙台西口 PREMIER 五晚",
         "twd": 40445,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "A"
       },
       {
         "region": "仙台",
@@ -122,7 +123,8 @@
         "category": "住宿",
         "name": "四季五晚含早晚餐（¥677,160）",
         "twd": 148975,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "A"
       },
       {
         "region": "藏王",
@@ -171,14 +173,16 @@
         "category": "住宿",
         "name": "滝の湯三晚含早晚餐（¥217,962）",
         "twd": 47952,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "A"
       },
       {
         "region": "山形／天童",
         "category": "活動",
         "name": "銀山 Night Tour 三人（¥23,400）",
         "twd": 5148,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "A"
       },
       {
         "region": "山形／天童",
@@ -220,7 +224,8 @@
         "category": "住宿",
         "name": "MIMARU 東京上野 NORTH｜鐵路景色家庭公寓房 34㎡｜2/03–2/06 三晚（已預約，付款待核對）",
         "twd": 38357,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "A"
       },
       {
         "region": "東京",
@@ -270,7 +275,8 @@
         "category": "機票",
         "name": "回程 JX315 信用卡購買（三人）",
         "twd": 37026,
-        "status": "confirmed"
+        "status": "confirmed",
+        "payer": "B"
       }
     ],
     "sharedEstimateTwd": 0,
@@ -465,7 +471,21 @@
       }
     ],
     "sharedConfirmedTwd": 37026,
-    "sharedTotalTwd": 37026
+    "sharedTotalTwd": 37026,
+    "costSharing": {
+      "shares": {
+        "A": 0.5,
+        "B": 0.5
+      },
+      "transfers": [
+        {
+          "from": "B",
+          "to": "A",
+          "twd": 30000
+        }
+      ],
+      "note": "依已確認訂單金額計算淨負擔；住宿實際扣款待核對。A、B 暫按各50%分攤（含小孩），轉帳不重複計入旅行支出。去程兌換稅費與購物未列。"
+    }
   },
   "regions": [
     {
